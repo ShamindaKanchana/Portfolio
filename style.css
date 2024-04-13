@@ -33,8 +33,19 @@ img {
     
     }
 
+    
+    .carousel-caption {
+        top: 30%; /* Adjust the percentage to move the caption closer to the top */
+        transform: translateY(-50%);
+        text-align: center; /* Center-align the text */
+    }
+
 
   
+    .carousel-item img {
+        filter: blur(2px); /* Adjust the blur radius as needed */
+    }
+
 
 
 
