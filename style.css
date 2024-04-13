@@ -66,6 +66,15 @@ img {
 
 
 
+  
+    
+    .img.box img {
+        width: 150px; /* Set the width */
+        height: 160px; /* Set the height */
+    }
+
+
+
 
 
 body {
