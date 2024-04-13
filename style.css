@@ -44,6 +44,18 @@ img {
         filter: blur(2px); /* Adjust the blur radius as needed */
     }
 
+    
+    #projects {
+        background-image: url('Pictures/project_back.jpg'); /* Add your image URL */
+        background-size: cover;
+        background-attachment: fixed; /* Ensures the background image remains fixed while content scrolls */
+        background-position: center;
+        padding: 100px 0; /* Adjust padding as needed */
+        color: white; /* Set text color to white */
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background color */
+        backdrop-filter: blur(10px); /* Apply a blur effect */
+    }
+
 
    
     .navbar {
