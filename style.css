@@ -18,9 +18,7 @@ img {
     overflow: clip;
 }
 
-.navbar {
-        min-height: 80px; /* Adjust the height as needed */
-}
+
 
 .navbar-nav .nav-link {
         font-size: 22px; /* Adjust the font size as needed */
@@ -46,6 +44,13 @@ img {
         filter: blur(2px); /* Adjust the blur radius as needed */
     }
 
+
+   
+    .navbar {
+        background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background color */
+        backdrop-filter: blur(10px); /* Apply a blur effect */
+        min-height: 80px; /* Adjust the height as needed */
+    }
 
 
 
