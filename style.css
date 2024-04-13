@@ -23,8 +23,19 @@ img {
 }
 
 .navbar-nav .nav-link {
-        font-size: 18px; /* Adjust the font size as needed */
+        font-size: 22px; /* Adjust the font size as needed */
 }
+
+.navbar-nav .nav-link:hover {
+        font-weight: bold;
+        transform: scale(1.1);
+        transition: all 0.3s ease; /* Smooth transition */
+    
+    }
+
+
+  
+
 
 
 
@@ -37,6 +48,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
+    backdrop-filter: blur(10px); /* Adjust blur amount as needed */
     background-color: #fff;
 }
 :root {
