@@ -18,6 +18,21 @@ img {
     overflow: clip;
 }
 
+.profile {
+    display: flex;
+    align-items: center; /* Vertically center the profile photo and name */
+}
+
+.profile img {
+    width: 40px; /* Adjust the size of the profile photo */
+    height: 40px; /* Adjust the size of the profile photo */
+    border-radius: 50%; /* Make it a circle */
+    margin-right: 10px; /* Add some spacing between the photo and the name */
+}
+
+.name {
+    font-weight: bold;
+}
 
 
 .navbar-nav .nav-link {
