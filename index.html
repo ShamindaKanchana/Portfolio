@@ -141,7 +141,110 @@ h1 {
 </style>
 
 
+<style>
+    .nft {
+      max-width: 400px;
+      height: 600px;
+      margin: 5rem auto;
+      border: 1px solid #ffffff22;
+      background-color: #282c34;
+      background: linear-gradient(0deg, rgba(40, 44, 52, 1) 0%, rgba(17, 0, 32, .5) 100%);
+      box-shadow: 0 7px 20px 5px #00000088;
+      border-radius: .7rem;
+      backdrop-filter: blur(7px);
+      -webkit-backdrop-filter: blur(7px);
+      overflow: hidden;
+      transition: .5s all;
+    }
 
+    .nft hr {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #88888855;
+      margin-top: 0;
+    }
+
+    .nft ins {
+      text-decoration: none;
+    }
+
+    .nft .main {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 1rem;
+    }
+
+    .nft .main .tokenImage {
+      border-radius: .5rem;
+      max-width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .nft .main .description {
+      margin: .5rem 0;
+      color: #a89ec9;
+    }
+
+    .nft .main .tokenInfo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #ee83e5;
+      font-weight: 700;
+    }
+
+    .nft .main .tokenInfo .price ins,
+    .nft .main .tokenInfo .duration ins {
+      margin: .5rem;
+      margin-bottom: .4rem;
+    }
+
+    .nft .main .creator {
+      display: flex;
+      align-items: center;
+      margin-top: .2rem;
+      margin-bottom: -.3rem;
+      color: #a89ec9;
+    }
+
+    .nft .main .creator ins {
+      text-decoration: none;
+    }
+
+    .nft .main .creator .wrapper {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ffffff22;
+      padding: .3rem;
+      margin: 0;
+      margin-right: .5rem;
+      border-radius: 100%;
+      box-shadow: inset 0 0 0 4px #000000aa;
+    }
+
+    .nft .main .creator img {
+      border-radius: 100%;
+      border: 1px solid #ffffff22;
+      width: 2rem;
+      height: 2rem;
+      object-fit: cover;
+      margin: 0;
+    }
+
+    .nft:hover {
+      border: 1px solid #ffffff44;
+      box-shadow: 0 7px 50px 10px #000000aa;
+      transform: scale(1.015);
+      filter: brightness(1.3);
+    }
+
+    .nft:hover::before {
+      top: -100%;
+      left: 200%;
+    }
+  </style>
 
         <!-- Gallery -->
 
@@ -206,65 +309,120 @@ h1 {
                        
     <section id="projects">
         <div class="container p-0">
-            <h1>Projects</h1>
-            <div class="row portfolio-row justify-content-center">  
-                <div class="col-12 col-md-5">
-                    <div class="text-center">
-                        <a target="_blank" class="title-linkk" href="https://towardsdatascience.com/real-face-or-ai-generated-fake-d95b30c1f86f---------------------------">
-                            <h5> SpotifyTrendsAnalyzer</h5>
-                        </a>
-                        <p class="project-des">
-                            <br>
-                            SpotifyTrendsAnalyzer is a data analytics project focused on unraveling trends within the world of Spotify music. Explore the popularity of artists, discover trending songs, and delve into the metrics of danceability and energy.
-                           
-
-
-
-                        </p>
-                        <div class="row">
-                            <a target="_blank" href="https://github.com/ShamindaKanchana/SpotifyTrendsAnalyzer">
-                                <img class="portfolio-img" src="./Pictures/spotify.png">
-
-                            </a>
-
-                        </div>
-
-                        
-
+          <h1>Projects</h1>
+          <div class="row portfolio-row justify-content-center">
+            <div class="col-12 col-md-6">
+              <div class="nft">
+                <div class='main'>
+                  <img class='tokenImage' src="./Pictures/spotify.png" alt="NFT" />
+                  <h2> SpotifyTrendsAnalyzer</h2>
+                  <p class='description'> SpotifyTrendsAnalyzer is a data analytics project focused on unraveling trends within the world of Spotify music. Explore the popularity of artists, discover trending songs, and delve into the metrics of danceability and energy.</p>
+                  <div class='tokenInfo'>
+                    <div class="price">
+                      <ins>◘</ins>
+                      <p>0.031 ETH</p>
                     </div>
-                </div>
-
-                <div class="col-12 col-md-5">
-                    <div class="text-center">
-                        <a target="_blank" class="title-linkk" href="https://towardsdatascience.com/real-face-or-ai-generated-fake-d95b30c1f86f---------------------------">
-                            <h5>GDP-and-Economic-Comparison-Sri-Lanka-vs.-USA</h5>
-                        </a>
-                        <p class="project-des">
-                            <br>
-                            In this project, I conducted a comprehensive analysis of population data using Python and various data analysis libraries. Leveraging pandas for data manipulation and seaborn for visualization, I explored demographic trends and patterns within the dataset. Through careful examination of population dynamics, including growth rates and etc
-                           
-
-
-
-                        </p>
-                        <div class="row">
-                            <a target="_blank" href="https://github.com/ShamindaKanchana/SpotifyTrendsAnalyzer">
-                                <img class="portfolio-img" src="./Pictures/econ.png">
-
-                            </a>
-
-                        </div>
-
-                        
-
+                    <div class="duration">
+                      <ins>◷</ins>
+                      <p>11 days left</p>
                     </div>
+                  </div>
+                  <hr />
+                  <div class='creator'>
+                    <div class='wrapper'>
+                      <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
+                    </div>
+                    <p><ins>Creation of</ins> Kiberbash</p>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>              
+            <div class="col-12 col-md-6">
+              <div class="nft">
+                <div class='main'>
+                  <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
+                  <h2>Kibertopiks #4269</h2>
+                  <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
+                  <div class='tokenInfo'>
+                    <div class="price">
+                      <ins>◘</ins>
+                      <p>0.031 ETH</p>
+                    </div>
+                    <div class="duration">
+                      <ins>◷</ins>
+                      <p>11 days left</p>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class='creator'>
+                    <div class='wrapper'>
+                      <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
+                    </div>
+                    <p><ins>Creation of</ins> Kiberbash</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 
-    </section>
+            <div class="col-12 col-md-6">
+                <div class="nft">
+                  <div class='main'>
+                    <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
+                    <h2>Kibertopiks #4269</h2>
+                    <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
+                    <div class='tokenInfo'>
+                      <div class="price">
+                        <ins>◘</ins>
+                        <p>0.031 ETH</p>
+                      </div>
+                      <div class="duration">
+                        <ins>◷</ins>
+                        <p>11 days left</p>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class='creator'>
+                      <div class='wrapper'>
+                        <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
+                      </div>
+                      <p><ins>Creation of</ins> Kiberbash</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+
+              <div class="col-12 col-md-6">
+                <div class="nft">
+                  <div class='main'>
+                    <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
+                    <h2>Kibertopiks #4269</h2>
+                    <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
+                    <div class='tokenInfo'>
+                      <div class="price">
+                        <ins>◘</ins>
+                        <p>0.031 ETH</p>
+                      </div>
+                      <div class="duration">
+                        <ins>◷</ins>
+                        <p>11 days left</p>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class='creator'>
+                      <div class='wrapper'>
+                        <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
+                      </div>
+                      <p><ins>Creation of</ins> Kiberbash</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- Add two more col-12 col-md-6 divs with the same structure -->
+          </div>
+        </div>
+      </section>
 
 
 
