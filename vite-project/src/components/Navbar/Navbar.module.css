@@ -9,25 +9,15 @@
   padding-left: 10px;
   z-index: 2;
   margin: 0 10%;
-
-   /* Glass effect styles */
-    /* Glass effect styles */
   background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
   backdrop-filter: blur(10px); /* Creates the frosted glass effect */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
   transition: all 0.3s ease;
-  
   display: flex;
   justify-content: space-between; /* Space between the title and menu */
   align-items: center; /* Center items vertically */
-
-
-  
 }
-
-
-
 
 .menu {
   display: flex;
@@ -36,9 +26,6 @@
   padding: 10px 20px; /* Add padding to make it look better */
 }
 
-/* Other styles for menu, links, etc. */
-
-
 .title {
   font-size: 30px;
   font-weight: 600;
@@ -46,6 +33,48 @@
   color: var(--color-text);
 }
 
+/* Normal state for menu items */
+.menuItems a {
+  font-size: 25px;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for a single menu item */
+.menuItems a:hover {
+  color: silver; /* Bright silver color on hover */
+  transform: scale(1.1); /* Smooth zoom effect */
+  box-shadow: 0 0 20px 10px rgba(192, 192, 192, 0.7); /* Glowing brightness with rounded corners */
+  border-radius: 14px; /* Rounded shadow edges */
+  transition: all 0.3s ease; /* Smooth transition for zoom and brightness */
+}
+
+/* Make other items slightly darker when hovering over a specific item */
+.menuItems:hover a {
+  opacity: 0.7; /* Make non-hovered items slightly dimmer */
+}
+
+/* Keep the hovered item fully visible */
+.menuItems a:hover {
+  opacity: 1; /* Restore full opacity for the hovered item */
+}
+
+/* For selected menu item, keep it bright and fully visible */
+.menuItems a.selected {
+  color: silver;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px 8px rgba(192, 192, 192, 0.7); /* Glowing shadow */
+  border-radius: 12px; /* Rounded corners for the glow */
+  opacity: 1; /* Full brightness */
+}
+
+/* Optional: Add some custom background color for the selected item */
+.menuItems a.selected {
+  background-color: rgba(192, 192, 192, 0.2); /* Subtle background to distinguish selection */
+  padding: 5px 10px; /* Padding to improve appearance */
+  border-radius: 12px; /* Rounded corners */
+}
 
 .menuBtn {
   display: none;
@@ -59,12 +88,6 @@
   display: flex;
   gap: 47px;
   list-style: none;
-}
-
-.menuItems a {
-  font-size: 25px;
-  color: var(--color-text);
-  text-decoration: none;
 }
 
 @media screen and (max-width: 830px) {
@@ -108,4 +131,15 @@
     display: flex;
     z-index: 1;
   }
+}
+
+.menuItems a.selected {
+  color: silver; /* Bright silver for the selected item */
+  font-weight: bold; /* Optionally make it bold */
+  transform: scale(1.1); /* Slight zoom-in effect */
+  box-shadow: 0 0 15px 8px rgba(192, 192, 192, 0.7); /* Glowing effect */
+  border-radius: 12px;
+  background-color: rgba(192, 192, 192, 0.2); /* Subtle background to highlight */
+  padding: 5px 10px; /* Add padding for a neater look */
+  opacity: 1; /* Keep full brightness */
 }
