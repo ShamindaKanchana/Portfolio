@@ -1,26 +1,34 @@
 [
   {
-    "title": "Project A",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
+    "title": "H2OData_Dive",
+    "imageSrc": "projects/h2o.jpg",
+    "description": "Explore portable water quality data for insights into pH, hardness, chloramines, sulfate, conductivity, and more. Analyze trends, correlations, and potability factors.",
+    "skills": ["Python", "Machine Learning", "Statistics"],
     "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "source": "https://github.com/ShamindaKanchana/H2OData_Dive"
   },
   {
-    "title": "Project B",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node", "Sass"],
+    "title": "RealEstatePriceForecast ",
+    "imageSrc": "projects/forecast.png",
+    "description": "This project focuses on predicting house prices in Bangalore using machine learning techniques. The goal is to build a model that accurately estimates property prices based on various features like location, square footage, number of bedrooms, and more.",
+    "skills": ["Python", "Machine Learning", "Statistics"],
     "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "source": "https://github.com/ShamindaKanchana/RealEstatePriceForecast"
   },
   {
-    "title": "Project C",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
+    "title": "SpotifyTrendsAnalyzer",
+    "imageSrc": "projects/spotify.png",
+    "description": "SpotifyTrendsAnalyzer is a data analytics project focused on unraveling trends within the world of Spotify music. Explore the popularity of artists, discover trending songs, and delve into the metrics of danceability and energy..",
+    "skills": ["SQL", "PoweBI", "Statistics"],
     "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "source": "https://github.com/ShamindaKanchana/SpotifyTrendsAnalyzer"
+  },
+  {
+    "title": "Placement-Insights-Unveiling-Trends-in-Student-Career-Trajectories ",
+    "imageSrc": "projects/econ.png",
+    "description": "Analyzing student placement data at XYZ Campus to uncover trends and factors influencing career outcomes. Utilizing descriptive and predictive analytics techniques to provide insights for students, educators, and recruiters.",
+    "skills": ["Python",  "Statistics"],
+    "demo": "https://www.example.com",
+    "source": "https://github.com/ShamindaKanchana/Placement-Insights-Unveiling-Trends-in-Student-Career-Trajectories"
   }
 ]
