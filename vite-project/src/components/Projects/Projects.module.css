@@ -1,21 +1,47 @@
 @import "../../vars.css";
 
+
+
+/* For mobile devices */
+@media screen and (max-width: 600px) {
+
+
+}
+
+
+/* For tablets */
+@media screen and (min-width: 601px) and (max-width: 1499px) {
+
+
+
+} 
+
+
+
+/* For desktops */
+@media screen and (min-width: 1500px) {
+
+
+}
+
+
+
 .container {
-  margin-top: 76px;
+  margin-top: 10px;
   color: var(--color-text);
   margin-left: 10%;
   margin-right: 10%;
 }
 
 .title {
-  font-size: 35px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 1.75px;
   text-transform: uppercase;
 }
 
 .projects {
-  margin-top: 37px;
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
