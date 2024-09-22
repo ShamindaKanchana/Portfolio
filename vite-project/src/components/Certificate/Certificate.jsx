@@ -1,55 +1,62 @@
 import React from "react";
 import styles from "./Certificate.module.css";
 
+// Import images if they are in the 'src' directory
+import certificate1 from "/assets/certificate/certificates/certificate1.png";
+import foundationsOfDataScience from "/assets/certificate/certificates/foundationsOfDataScience.png";
+import DataAnalytics from "/assets/certificate/certificates/DataAnalytics.png";
+import supervisedMachineLearning from "/assets/certificate/certificates/supervisedMachineLearning_with_logisticRegression.png";
+import machinelearning from "/assets/certificate/certificates/machinelearning.png";
+import basicsOfMachineLearning from "/assets/certificate/certificates/basicsOfMachineLearning.png";
+import ProbabilityAndProbabilityDistributionML from "/assets/certificate/certificates/Probability_and_probability_distributionML.png";
+import statForML from "/assets/certificate/certificates/stat_forML.png";
+import pythonForDataScience from "/assets/certificate/certificates/pythonFor_DataScience.png";
+
 export const Certificate = () => {
   const certificates = [
     {
-      src: "/assets/certificate/certificates/certificate1.png",
+      src: certificate1,
       alt: "Certificate 1",
       link: "https://link-to-certificate1.com"
     },
     {
-      src: "/assets/certificate/certificates/foundationsOfDataScience.png",
+      src: foundationsOfDataScience,
       alt: "Certificate 2",
       link: "https://www.coursera.org/account/accomplishments/certificate/8WZW6QFNFEJL"
     },
     {
-      src: "/assets/certificate/certificates/DataAnalytics.png",
+      src: DataAnalytics,
       alt: "Certificate 3",
       link: "https://www.coursera.org/account/accomplishments/professional-cert/AJ45UA7UGP9X"
-    }
-    ,
+    },
     {
-      src: "/assets/certificate/certificates/supervisedMachineLearning_with_logisticRegression.png",
+      src: supervisedMachineLearning,
       alt: "Certificate 4",
       link: "https://olympus.mygreatlearning.com/courses/33273/certificate"
     },
     {
-      src: "/assets/certificate/certificates/machinelearning.png",
+      src: machinelearning,
       alt: "Certificate 5",
       link: "https://olympus.mygreatlearning.com/courses/57914/certificate"
     },
     {
-      src: "/assets/certificate/certificates/basicsOfMachineLearning.png",
+      src: basicsOfMachineLearning,
       alt: "Certificate 6",
       link: "https://olympus.mygreatlearning.com/courses/57914/certificate"
-    }
-    ,
+    },
     {
-      src: "/assets/certificate/certificates/Probability_and_probability_distributionML.png",
+      src: ProbabilityAndProbabilityDistributionML,
       alt: "Certificate 7",
       link: "https://olympus.mygreatlearning.com/courses/34995/certificate"
-    }
-    ,
+    },
     {
-      src: "/assets/certificate/certificates/stat_forML.png",
-      alt: "Certificate 7",
-      link: "https://olympus.mygreatlearning.com/courses/10901/certificate"
-    }
-    ,
-    {
-      src: "/assets/certificate/certificates/pythonFor_DataScience.png",
+      src: statForML,
       alt: "Certificate 8",
+      link: "https://olympus.mygreatlearning.com/courses/10901/certificate"
+    },
+    {
+      src: pythonForDataScience,
+      alt: "Certificate 9",
       link: "https://olympus.mygreatlearning.com/courses/47916/certificate"
     }
     // Add more certificates here as needed

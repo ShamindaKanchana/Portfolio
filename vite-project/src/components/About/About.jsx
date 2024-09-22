@@ -16,7 +16,7 @@ export const About = () => {
         <a href="mailto:msk60310910@gmail.com" className={styles.contactBtn}>
           Contact Me
         </a>
-        
+        <br /><br /><br />
       </div>
       <img
         src={getImageUrl("about/profile.png")}
