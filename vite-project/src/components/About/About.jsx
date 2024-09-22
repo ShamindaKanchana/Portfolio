@@ -20,7 +20,7 @@ solutions
         
       </div>
       <img
-        src={getImageUrl("hero/profile.png")}
+        src={getImageUrl("about/profile.png")}
         alt="About image of me"
         className={styles.heroImg}
       />
