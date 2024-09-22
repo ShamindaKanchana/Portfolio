@@ -2,8 +2,13 @@
 
 .container {
   padding: 20px;
-}
+  position: relative;
+  z-index: 10; /* Ensure it is above other content if needed */
+  margin-left: 8%; /* Adds margin on the left */
+  margin-right: 8%; /* Adds margin on the right */
+  border-radius: 15px; /* Adjust this value for more/less rounded corners */
 
+}
 .content {
   display: flex;
   flex-direction: column;
@@ -21,7 +26,7 @@
 .gallery {
   display: inline-flex; /* Display items in a row */
   gap: 20px; /* Space between images */
-  padding: 10px; /* Padding around the gallery */
+  padding: 100px; /* Padding around the gallery */
   background: rgba(255, 255, 255, 0.1); /* Transparent white background */
   backdrop-filter: blur(10px); /* Frosted glass effect */
   border-radius: 15px; /* Rounded corners for the glass effect */
@@ -47,7 +52,7 @@
 
 /* Certificate item hover effect */
 .certificateItem:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  transform: scale(1.2); /* Slightly enlarge on hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow effect */
 }
 
@@ -58,13 +63,13 @@
   object-fit: cover; /* Ensure the image covers the container without distortion */
 }
 
+
 .title {
-  font-size: 2rem; /* Adjust as needed */
-  font-weight: bold; /* Makes the text bold */
-  margin-bottom: 20px; /* Spacing below the heading */
-  color: #333; /* Dark color for good readability */
-  text-align: center; /* Center align the heading */
-  text-transform: uppercase; /* Optional: makes the text uppercase */
-  border-bottom: 2px solid #c0c0c0; /* Optional: silver line below the heading */
-  padding-bottom: 10px; /* Padding below the heading for spacing */
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+
 }
