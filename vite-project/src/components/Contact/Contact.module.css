@@ -9,14 +9,14 @@
   
 .container {
   color: var(--color-text);
-  margin-top: 20px;
+  margin-top: 25px;
   background-color: var(--color-secondary);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
-  width: 100vw;
-  padding: 6px 10%;
-  gap: 5px;
+
+  padding: 25px 10%;
+  gap: 3px;
 }
 
 .text h2 {
@@ -36,13 +36,13 @@
   flex-direction: column;
   align-items: flex-start;
   list-style: none;
-  gap: 26px;
+  gap: 10px;
 }
 
 .link {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 18px;
 }
 
 .link a {
