@@ -4,7 +4,6 @@
     "imageSrc": "projects/h2o.jpg",
     "description": "Explore portable water quality data for insights into pH, hardness, chloramines, sulfate, conductivity, and more. Analyze trends, correlations, and potability factors.",
     "skills": ["Python", "Machine Learning", "Statistics"],
-    "demo": "https://www.example.com",
     "source": "https://github.com/ShamindaKanchana/H2OData_Dive"
   },
   {
@@ -12,7 +11,6 @@
     "imageSrc": "projects/forecast.png",
     "description": "This project focuses on predicting house prices in Bangalore using machine learning techniques. The goal is to build a model that accurately estimates property prices based on various features like location, square footage, number of bedrooms, and more.",
     "skills": ["Python", "Machine Learning", "Statistics"],
-    "demo": "https://www.example.com",
     "source": "https://github.com/ShamindaKanchana/RealEstatePriceForecast"
   },
   {
@@ -20,15 +18,23 @@
     "imageSrc": "projects/spotify.png",
     "description": "SpotifyTrendsAnalyzer is a data analytics project focused on unraveling trends within the world of Spotify music. Explore the popularity of artists, discover trending songs, and delve into the metrics of danceability and energy..",
     "skills": ["SQL", "PoweBI", "Statistics"],
-    "demo": "https://www.example.com",
     "source": "https://github.com/ShamindaKanchana/SpotifyTrendsAnalyzer"
   },
   {
     "title": "Placement-Insights-Unveiling-Trends-in-Student-Career-Trajectories ",
-    "imageSrc": "projects/econ.png",
+    "imageSrc": "projects/stu.png",
     "description": "Analyzing student placement data at XYZ Campus to uncover trends and factors influencing career outcomes. Utilizing descriptive and predictive analytics techniques to provide insights for students, educators, and recruiters.",
     "skills": ["Python",  "Statistics"],
-    "demo": "https://www.example.com",
     "source": "https://github.com/ShamindaKanchana/Placement-Insights-Unveiling-Trends-in-Student-Career-Trajectories"
   }
+  ,
+
+  {
+    "title": "GDP-and-Economic-Comparison-Sri-Lanka-vs.-USA",
+    "imageSrc": "projects/econ.png",
+    "description": "In this project, I conducted a comprehensive analysis of population data using Python and various data analysis libraries. Leveraging pandas for data manipulation and seaborn for visualization, I explored demographic trends and patterns within the dataset. Through careful examination of population dynamics, including growth rates and etc",
+    "skills": ["Python",  "Statistics"],
+    "source": "https://github.com/ShamindaKanchana/GDP-and-Economic-Comparison-Sri-Lanka-vs.-USA"
+  }
+
 ]
