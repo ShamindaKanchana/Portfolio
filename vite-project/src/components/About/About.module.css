@@ -55,12 +55,40 @@
     font-weight: 600;
     padding: 8px 13px;
     box-shadow: 0 0 4px 0 rgba(96, 55, 150, 0.644);
-    transition: box-shadow 0.3s ease; /* Smooth transition effect */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition effect */
     
   }
+  /* Resume Button (Red color) */
+   .resumeBtn {
+    text-decoration: none;
+    background-color: rgb(85, 28, 150); /* blue background for Resume button */
+    color: var(--color-text);
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 13px;
+    box-shadow: 0 0 4px 0 rgba(96, 55, 150, 0.644);
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+  }
+
+  .contactBtn:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+  }
+  .resumeBtn:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+  }
   
-  
-  .heroImg {
+ 
+
+  /* Add spacing between the buttons */
+  .buttonContainer {
+     display: flex;
+     gap: 7px; /* Adjust the gap between the buttons */
+  }
+
+
+  .aboutImg {
     width: 160px; /* Adjust as needed */
     height: 160px; /* Same as width to maintain the circular shape */
     border-radius: 50%; /* Makes it a perfect circle */
@@ -76,7 +104,7 @@
     transition: transform 0.3s ease;
   }
   
-  .heroImg:hover {
+  .aboutImg:hover {
     transform: scale(1.05); /* Slight zoom on hover */
   }
   
@@ -186,12 +214,37 @@
     font-weight: 600;
     padding: 17px 26px;
     box-shadow: 0 0 4px 0 rgba(96, 55, 150, 0.644);
-    transition: box-shadow 0.3s ease; /* Smooth transition effect */
+    transition: transform 0.3s ease, filter 0.3s ease;  /* Smooth transition effect */
     
   }
   
-  
-  .heroImg {
+  .resumeBtn {
+    text-decoration: none;
+    background-color: rgb(85, 28, 150);
+    color: var(--color-text);
+    border-radius: 100px;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 17px 26px;
+    box-shadow: 0 0 4px 0 rgba(96, 55, 150, 0.644);
+    transition: transform 0.3s ease, filter 0.3s ease;  /* Smooth transition effect */
+    
+  }
+
+  .contactBtn:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  .resumeBtn:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+    
+  .buttonContainer {
+    display: flex;
+    gap: 28px; /* Adjust the gap between the buttons */
+ }
+
+
+  .aboutImg {
     width: 250px; /* Adjust as needed */
     height: 250px; /* Same as width to maintain the circular shape */
     border-radius: 50%; /* Makes it a perfect circle */
@@ -207,7 +260,7 @@
     transition: transform 0.3s ease;
   }
   
-  .heroImg:hover {
+  .aboutImg:hover {
     transform: scale(1.05); /* Slight zoom on hover */
   }
   
@@ -311,12 +364,34 @@
     font-weight: 600;
     padding: 17px 26px;
     box-shadow: 0 0 4px 0 rgba(96, 55, 150, 0.644);
-    transition: box-shadow 0.3s ease; /* Smooth transition effect */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition effect */
     
   }
   
-  
-  .heroImg {
+  .resumeBtn {
+    text-decoration: none;
+    background-color: rgb(85, 28, 150);
+    color: var(--color-text);
+    border-radius: 100px;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 17px 26px;
+    box-shadow: 0 0 4px 0 rgba(96, 55, 150, 0.644);
+    transition: transform 0.3s ease, filter 0.3s ease;   /* Smooth transition effect */
+    
+  }
+
+  .contactBtn:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+  }
+  .resumeBtn:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+  }
+  .buttonContainer {
+    display: flex;
+    gap: 35px; /* Adjust the gap between the buttons */
+ }
+  .aboutImg {
     width: 550px; /* Adjust as needed */
     height: 550px; /* Same as width to maintain the circular shape */
     border-radius: 50%; /* Makes it a perfect circle */
@@ -332,7 +407,7 @@
     transition: transform 0.3s ease;
   }
   
-  .heroImg:hover {
+  .aboutImg:hover {
     transform: scale(1.05); /* Slight zoom on hover */
   }
   

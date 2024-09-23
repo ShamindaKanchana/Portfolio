@@ -13,15 +13,22 @@ export const About = () => {
 
         Currently pursuing a <b>BSc Honours in Computer Science at the University of Jaffna</b>, I am an undergraduate with a strong commitment to growing my knowledge and experience in the domain of data science.
         </p>
-        <a href="mailto:msk60310910@gmail.com" className={styles.contactBtn}>
-          Contact Me
-        </a>
+        <div className={styles.buttonContainer}>
+          <a href="mailto:msk60310910@gmail.com" className={styles.contactBtn}>
+            Send a mail
+          </a>
+
+          {/* Resume Button */}
+          <a  href="https://drive.google.com/file/d/16liNHZZbDiJqBQH2QDMwS4gYpTS86KFY/view?usp=drive_link" className={styles.resumeBtn}>
+            Resume
+          </a>
+        </div>
         <br /><br /><br />
       </div>
       <img
         src={getImageUrl("about/profile.png")}
         alt="About image of me"
-        className={styles.heroImg}
+        className={styles.aboutImg}
       />
       <div className={styles.topBlur} />
       <div className={styles.bottomBlur} />

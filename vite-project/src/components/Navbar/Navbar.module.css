@@ -13,7 +13,7 @@
     padding-block: 3px;
     padding-left: 3px;
     z-index: 2;
-    margin: 0 0.8%;
+    margin: 0 0.6%;
     background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
     backdrop-filter: blur(5px); /* Creates the frosted glass effect */
     border-radius: 7px; /* Rounded corners */
@@ -28,19 +28,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 7px 16px; /* Add padding to make it look better */
+    padding: 6px 11px; /* Add padding to make it look better */
   }
   
-  .title {
-    font-size: 18px;
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--color-text);
-  }
+ 
   
   /* Normal state for menu items */
   .menuItems a {
-    font-size: 15px;
+    font-size: 15.5px;
     color: var(--color-text);
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
@@ -91,7 +86,7 @@
   
   .menuItems {
     display: flex;
-    gap: 47px;
+    gap: 30px;
     list-style: none;
   }
   

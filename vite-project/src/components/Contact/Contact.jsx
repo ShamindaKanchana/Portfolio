@@ -11,10 +11,7 @@ export const Contact = () => {
         <p>Feel free to reach out!</p>
       </div>
       <ul className={styles.links}>
-        <li className={styles.link}>
-          <img src={getImageUrl("contact/emailIcon.png")} alt="Email icon" />
-          <a href="msk60310910@gmail.com">msk60310910@gmail.com</a>
-        </li>
+        
         <li className={styles.link}>
           <img
             src={getImageUrl("contact/linkedinIcon.png")}
