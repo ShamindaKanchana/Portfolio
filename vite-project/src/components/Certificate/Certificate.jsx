@@ -11,6 +11,7 @@ import basicsOfMachineLearning from "/assets/certificate/certificates/basicsOfMa
 import ProbabilityAndProbabilityDistributionML from "/assets/certificate/certificates/Probability_and_probability_distributionML.png";
 import statForML from "/assets/certificate/certificates/stat_forML.png";
 import pythonForDataScience from "/assets/certificate/certificates/pythonFor_DataScience.png";
+import ML_modelDeploy_usingFlask from "/assets/certificate/certificates/MLmodel_deployment_usingFlask.png";
 
 export const Certificate = () => {
   const certificates = [
@@ -58,6 +59,12 @@ export const Certificate = () => {
       src: pythonForDataScience,
       alt: "Certificate 9",
       link: "https://olympus.mygreatlearning.com/courses/47916/certificate"
+    },
+
+    {
+      src: ML_modelDeploy_usingFlask,
+      alt: "Certificate 10",
+      link: "https://olympus.mygreatlearning.com/courses/47894/certificate"
     }
     // Add more certificates here as needed
   ];
