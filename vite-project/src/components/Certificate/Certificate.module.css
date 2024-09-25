@@ -8,7 +8,7 @@
   .container {
     padding: 10px;
     position: relative;
-    z-index: 10; /* Ensure it is above other content if needed */
+    z-index: 1; /* Ensure it is above other content if needed */
     margin-left: 8%; /* Adds margin on the left */
     margin-right: 8%; /* Adds margin on the right */
     border-radius: 15px; /* Adjust this value for more/less rounded corners */
