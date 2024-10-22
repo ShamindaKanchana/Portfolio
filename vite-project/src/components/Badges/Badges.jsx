@@ -16,7 +16,7 @@ export const Badges = () => {
   ];
 
   return (
-    <section className={styles.container} id="badge">
+    <section className={styles.container} id="badges">
       <h2 className={styles.title}>Badges</h2><br />
       <div className={styles.content}>
         <div className={styles.scrollContainer}>

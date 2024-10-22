@@ -6,6 +6,8 @@
 @media screen and (max-width: 600px) {
 
   .container {
+    padding: 10px;
+    position: relative;
     margin-top: 7px;
     color: var(--color-text);
     margin-left: 10%;
@@ -36,10 +38,12 @@
 /* For tablets */
 @media screen and (min-width: 601px) and (max-width: 1499px) {
   .container {
+    padding: 20px;
+    position: relative;
     margin-top: 76px;
     color: var(--color-text);
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 8%;
+    margin-right: 8%;
   }
   
   .title {
@@ -71,10 +75,12 @@
 
 
   .container {
+    padding: 20px;
     margin-top: 76px;
     color: var(--color-text);
-    margin-left: 10%;
+    margin-left: 8%;
     margin-right: 10%;
+    position: relative;
   }
   
   .title {
