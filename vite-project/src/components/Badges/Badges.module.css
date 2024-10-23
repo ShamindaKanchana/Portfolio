@@ -54,7 +54,7 @@
   .badgeImage {
     max-width: 100%; /* Ensures images fit their container */
     height: auto; /* Keeps aspect ratio */
-    max-height: px; /* Sets a max height for uniformity */
+    max-height: 50px; /* Sets a max height for uniformity */
   }
   
 
