@@ -13,6 +13,7 @@ import statForML from "/assets/certificate/certificates/stat_forML.png";
 import pythonForDataScience from "/assets/certificate/certificates/pythonFor_DataScience.png";
 import ML_modelDeploy_usingFlask from "/assets/certificate/certificates/MLmodel_deployment_usingFlask.png";
 import AI_ML from "/assets/certificate/certificates/AI_ML_slit.png";
+import AI_ML2 from "/assets/certificate/certificates/AI_ML2_slit.png";
 
 export const Certificate = () => {
   const certificates = [
@@ -27,6 +28,11 @@ export const Certificate = () => {
       src: AI_ML,
       alt: "Certificate 11",
       link: "https://code.sliit.org/certificates/8g5yogcerp"
+    },
+    {
+      src: AI_ML2,
+      alt: "Certificate 12",
+      link: "https://code.sliit.org/certificates/hhgh3rhmv8"
     }
     ,
     {
