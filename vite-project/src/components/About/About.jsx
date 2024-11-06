@@ -17,7 +17,7 @@ export const About = () => {
           <a href="mailto:msk60310910@gmail.com" className={styles.contactBtn}>
             Send a mail
           </a>
-          <a href="https://drive.google.com/file/d/16liNHZZbDiJqBQH2QDMwS4gYpTS86KFY/view?usp=drive_link" className={styles.resumeBtn}>
+          <a href="https://drive.google.com/file/d/1-UucltLCYu62fp2QDszyO_vCKIo4I0SL/view?usp=sharing" className={styles.resumeBtn}>
             Resume
           </a>
         </div>
