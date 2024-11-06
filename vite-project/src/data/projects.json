@@ -2,7 +2,7 @@
   {
     "title": "H2OData_Dive",
     "imageSrc": "projects/h2o.jpg",
-    "description": "Explore portable water quality data for insights into pH, hardness, chloramines, sulfate, conductivity, and more. Analyze trends, correlations, and potability factors.",
+    "description": "A machine learning-based Flask web app that predicts water potability based on key water quality indicators. This project combines data analysis, model building (RandomForestClassifier)",
     "skills": ["Python", "Machine Learning", "Statistics"],
     "source": "https://github.com/ShamindaKanchana/H2OData_Dive"
   },
@@ -16,7 +16,7 @@
   {
     "title": "SpotifyTrendsAnalyzer",
     "imageSrc": "projects/spotify.png",
-    "description": "SpotifyTrendsAnalyzer is a data analytics project focused on unraveling trends within the world of Spotify music. Explore the popularity of artists, discover trending songs, and delve into the metrics of danceability and energy..",
+    "description": "SpotifyTrendsAnalyzer is a data analytics project focused on uncovering trends within Spotify music. Analyze artist popularity, track song trends, and explore metrics like danceability and energy. Now featuring an interactive Tableau dashboard, with data preprocessed using Python and SQL for optimized insights.",
     "skills": ["SQL", "PoweBI","Tableau","Python"],
     "source": "https://github.com/ShamindaKanchana/SpotifyTrendsAnalyzer"
   },
