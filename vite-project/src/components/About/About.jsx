@@ -14,7 +14,7 @@ export const About = () => {
           Currently pursuing a <b>BSc Honours in Computer Science at the University of Jaffna</b>, I am an undergraduate with a strong commitment to growing my knowledge and experience in the domain of data science.
         </p>
         <div className={styles.buttonContainer}>
-          <a href="mailto:msk60310910@gmail.com" className={styles.contactBtn}>
+          <a href="mailto:shamindakanchana@icloud.com" className={styles.contactBtn}>
             Send a mail
           </a>
           <a href="https://drive.google.com/file/d/1-UucltLCYu62fp2QDszyO_vCKIo4I0SL/view?usp=sharing" className={styles.resumeBtn}>
