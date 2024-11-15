@@ -17,7 +17,7 @@ export const About = () => {
           <a href="mailto:shamindakanchana@icloud.com" className={styles.contactBtn}>
             Send a mail
           </a>
-          <a href="https://drive.google.com/file/d/1-UucltLCYu62fp2QDszyO_vCKIo4I0SL/view?usp=sharing" className={styles.resumeBtn}>
+          <a href="https://drive.google.com/file/d/1ahZjoACq1WVYKxxwYuAjPVJ2qH4ePj50/view?usp=drive_link" className={styles.resumeBtn}>
             Resume
           </a>
         </div>
