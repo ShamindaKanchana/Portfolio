@@ -35,6 +35,13 @@
     "description": "In this project, I conducted a comprehensive analysis of population data using Python and various data analysis libraries. Leveraging pandas for data manipulation and seaborn for visualization, I explored demographic trends and patterns within the dataset. Through careful examination of population dynamics, including growth rates and etc",
     "skills": ["Python",  "Statistics"],
     "source": "https://github.com/ShamindaKanchana/GDP-and-Economic-Comparison-Sri-Lanka-vs.-USA"
+  },
+  {
+    "title": "CreditCard_Fraud_Detection",
+    "imageSrc": "projects/credit_card_fraud.png",
+    "description": "FraudGuard is a machine learning model for detecting fraudulent credit card transactions using anonymized transaction data",
+    "skills": ["Python", "Machine Learning", "Statistics"],
+    "source": "https://github.com/ShamindaKanchana/CreditCard_Fraud_Detection"
   }
 
 ]
