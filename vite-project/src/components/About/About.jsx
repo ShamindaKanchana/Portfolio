@@ -11,13 +11,13 @@ export const About = () => {
         <p className={styles.description}> 
           Aspiring to become a versatile data professional, I am driven by a passion for both data science and data analysis. I am dedicated to continuous learning and staying up-to-date with the latest advancements in the field. My goal is to leverage my analytical skills to extract valuable insights from raw data, transforming it into actionable intelligence that drives innovative solutions.<br /><br />
 
-          Currently pursuing a <b>BSc Honours in Computer Science at the University of Jaffna</b>, I am an undergraduate with a strong commitment to growing my knowledge and experience in the domain of data science.
+          Currently pursuing a <b>BSc Honours in Computer Science at the Vavuniya Campus of the  University of Jaffna</b>, I am an undergraduate with a strong commitment to growing my knowledge and experience in the domain of data science.
         </p>
         <div className={styles.buttonContainer}>
           <a href="mailto:shamindakanchana@icloud.com" className={styles.contactBtn}>
             Send a mail
           </a>
-          <a href="https://drive.google.com/file/d/1zv_xxDy0U-WUVfCgJFTdAMMpfEwXcQSw/view?usp=sharing" className={styles.resumeBtn}>
+          <a href="https://drive.google.com/file/d/1UJ9qpQBwuAPx_yRXO_cXIERajS6Fpgtm/view?usp=drive_link" className={styles.resumeBtn}>
             Resume
           </a>
         </div>
