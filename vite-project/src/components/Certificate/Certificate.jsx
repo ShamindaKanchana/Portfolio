@@ -14,6 +14,7 @@ import pythonForDataScience from "/assets/certificate/certificates/pythonFor_Dat
 import ML_modelDeploy_usingFlask from "/assets/certificate/certificates/MLmodel_deployment_usingFlask.png";
 import AI_ML from "/assets/certificate/certificates/AI_ML_slit.png";
 import AI_ML2 from "/assets/certificate/certificates/AI_ML2_slit.png";
+import IntroToDeepLearning from "/assets/certificate/certificates/intrTODeepLearning.png";
 
 export const Certificate = () => {
   const certificates = [
@@ -39,6 +40,12 @@ export const Certificate = () => {
       src: certificate1,
       alt: "Certificate 1",
       link: "https://link-to-certificate1.com"
+    }
+    ,
+    {
+      src: IntroToDeepLearning,
+      alt: "Certificate 13",
+      link: "https://www.kaggle.com/learn/certification/shamindakanchana/intro-to-deep-learning"
     }
     ,
     {
