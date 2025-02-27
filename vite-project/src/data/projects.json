@@ -45,10 +45,11 @@
   },
   {
     "title": "Plant Disease Detection",
-    "imageSrc": "projects/plantDiesease.jpeg",
+    "imageSrc": "projects/PlantDisease.png",
     "description": "A deep learning-based project for detecting plant diseases from leaf images using convolutional neural networks (CNNs).",
-    "skills": ["Python", "Deep Learning", "CNN"],
+    "skills": ["Python", "Deep Learning","CNN"],
     "source": "https://www.kaggle.com/code/shamindakanchana/plantdiseasedetection"
   }
 
 ]
+ 
