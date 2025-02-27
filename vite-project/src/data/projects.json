@@ -42,6 +42,13 @@
     "description": "FraudGuard is a machine learning model for detecting fraudulent credit card transactions using anonymized transaction data",
     "skills": ["Python", "Machine Learning", "Statistics"],
     "source": "https://github.com/ShamindaKanchana/CreditCard_Fraud_Detection"
+  },
+  {
+    "title": "Plant Disease Detection",
+    "imageSrc": "projects/plantDiesease.jpeg",
+    "description": "A deep learning-based project for detecting plant diseases from leaf images using convolutional neural networks (CNNs).",
+    "skills": ["Python", "Deep Learning", "CNN"],
+    "source": "https://www.kaggle.com/code/shamindakanchana/plantdiseasedetection"
   }
 
 ]
