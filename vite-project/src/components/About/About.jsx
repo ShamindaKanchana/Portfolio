@@ -9,7 +9,7 @@ export const About = () => {
         <br /><br /><br />
         <h1 className={styles.title}>Hi, I'm Shaminda</h1>
         <p className={styles.description}> 
-          Aspiring to become a versatile data professional, I am driven by a passion for both data science and data analysis. I am dedicated to continuous learning and staying up-to-date with the latest advancements in the field. My goal is to leverage my analytical skills to extract valuable insights from raw data, transforming it into actionable intelligence that drives innovative solutions.<br /><br />
+        Aspiring to become a versatile data professional, I am driven by a passion for data science, AI, and machine learning. I am dedicated to continuous learning and staying up-to-date with the latest advancements in these fields. My goal is to leverage my analytical and machine learning skills to extract valuable insights from data, transforming it into intelligent solutions that drive innovation.<br /><br />
 
           Currently pursuing a <b>BSc Honours in Computer Science at the Vavuniya Campus of the  University of Jaffna</b>, I am an undergraduate with a strong commitment to growing my knowledge and experience in the domain of data science.
         </p>
