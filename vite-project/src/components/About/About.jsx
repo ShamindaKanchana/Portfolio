@@ -9,7 +9,7 @@ export const About = () => {
         <br /><br /><br />
         <h1 className={styles.title}>Hi, I'm Shaminda</h1>
         <p className={styles.description}> 
-        Aspiring to become a versatile data professional, I am driven by a passion for data science, AI, and machine learning. I am dedicated to continuous learning and staying up-to-date with the latest advancements in these fields. My goal is to leverage my analytical and machine learning skills to extract valuable insights from data, transforming it into intelligent solutions that drive innovation.<br /><br />
+        As an AI intern, I'm passionate about AI and data science, specializing in machine learning and deep learning. I love creating intelligent systems that learn from data to solve real-world problems. Committed to continuous learning, I stay updated with the latest advancements in both fields.<br /><br />
 
           Currently pursuing a <b>BSc Honours in Computer Science at the Vavuniya Campus of the  University of Jaffna</b>, I am an undergraduate with a strong commitment to growing my knowledge and experience in the domain of data science.
         </p>
