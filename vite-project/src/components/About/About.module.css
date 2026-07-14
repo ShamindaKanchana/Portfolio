@@ -1,35 +1,32 @@
 @import "../../vars.css";
 
-
-
-
-/* For mobile devices */
+/* ---------- Mobile ---------- */
 @media screen and (max-width: 600px) {
-
-
   .container {
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 10px;
+    flex-direction: column;
+    margin-top: 72px;
     z-index: 1;
     margin-left: 10%;
     margin-right: 10%;
-  }
-  
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     color: var(--color-text);
+  }
+
+  .headerRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
     z-index: 1;
   }
-  
+
   .title {
-    font-size: 30px;
+    flex: 1 1 auto;
+    margin: 0;
+    font-size: 28px;
     font-weight: 900;
-    margin-bottom: 10px;
     font-family: var(--font-roboto);
     background: linear-gradient(
       90deg,
@@ -38,158 +35,125 @@
     );
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
   }
-  
-  .description {
-    font-size: 18px;
-    font-family: var(--font-roboto);
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  .contactBtn {
-    text-decoration: none;
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    border-radius: 7px;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 8px 13px;
-    box-shadow: 0 0 4px 0 rgba(96, 55, 150, 0.644);
-    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition effect */
-    
-  }
-  /* Resume Button (Red color) */
-   .resumeBtn {
-    text-decoration: none;
-    background-color: rgb(85, 28, 150); /* blue background for Resume button */
-    color: var(--color-text);
-    border-radius: 7px;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 8px 13px;
-    box-shadow: 0 0 4px 0 rgba(96, 55, 150, 0.644);
-    transition: transform 0.3s ease, filter 0.3s ease;
-
-  }
-
-  .contactBtn:hover {
-    transform: scale(1.02); /* Slight zoom on hover */
-  }
-  .resumeBtn:hover {
-    transform: scale(1.02); /* Slight zoom on hover */
-  }
-  
- 
-
-  /* Add spacing between the buttons */
-  .buttonContainer {
-     display: flex;
-     gap: 7px; /* Adjust the gap between the buttons */
-  }
-
 
   .aboutImg {
-    width: 160px; /* Adjust as needed */
-    height: 160px; /* Same as width to maintain the circular shape */
-    border-radius: 50%; /* Makes it a perfect circle */
-    object-fit: cover; /* Ensures the image fits well within the circle */
-    
-    /* Add a border */
-    border: 2px solid #4CAF50; /* Change color to your preference */
-  
-    /* Add a shadow for a 3D effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  
-    /* Optional: add a hover effect */
+    width: 96px;
+    height: 96px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4caf50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+
+  .aboutImg:hover {
+    transform: scale(1.05);
+  }
+
+  .body {
+    margin-top: 22px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .description {
+    margin: 0 0 24px;
+    font-size: 16px;
+    font-family: var(--font-roboto);
+    line-height: 1.55;
+    text-align: left;
+    width: 100%;
+  }
+
+  .buttonContainer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .contactBtn,
+  .resumeBtn {
+    text-decoration: none;
+    color: var(--color-text);
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 13px;
+    box-shadow: 0 0 4px 0 rgba(96, 55, 150, 0.644);
     transition: transform 0.3s ease;
   }
-  
-  .aboutImg:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+
+  .contactBtn {
+    background-color: var(--color-primary);
   }
-  
-  
-  @keyframes floating {
-    0% {
-      transform: translate(0, 0px);
-    }
-    50% {
-      transform: translate(0, 10px);
-    }
-    100% {
-      transform: translate(0, -0px);
-    }
+
+  .resumeBtn {
+    background-color: rgb(85, 28, 150);
   }
-  
-  .topBlur {
-    position: absolute;
-    width: 50vw;
-    height: 50vw;
-    min-width: 350px;
-    min-width: 350px;
-    top: -128px;
-    left: -10vw;
-    border-radius: 764px;
-    background: rgba(25, 55, 109, 0.7);
-    filter: blur(100px);
-    z-index: 0;
+
+  .contactBtn:hover,
+  .resumeBtn:hover {
+    transform: scale(1.02);
   }
-  
+
+  .topBlur,
   .bottomBlur {
     position: absolute;
-    width: 70vw;
-    height: 50vw;
-    min-width: 350px;
-    min-width: 250px;
-    top: 246px;
-    right: -25vw;
     border-radius: 764px;
     background: rgba(25, 55, 109, 0.7);
     filter: blur(100px);
     z-index: 0;
+    pointer-events: none;
   }
-  
-  @media screen and (max-width: 830px) {
-    .container {
-      flex-direction: column-reverse;
-    }
-  
-    .content {
-      align-items: center;
-    }
+
+  .topBlur {
+    width: 50vw;
+    height: 50vw;
+    min-width: 280px;
+    top: -80px;
+    left: -10vw;
   }
-  
-  /* Mobile-specific styles */
+
+  .bottomBlur {
+    width: 70vw;
+    height: 40vw;
+    min-width: 250px;
+    top: 200px;
+    right: -20vw;
+  }
 }
 
-/* For tablets */
+/* ---------- Tablet ---------- */
 @media screen and (min-width: 601px) and (max-width: 1499px) {
-
-
   .container {
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 49px;
+    flex-direction: column;
+    margin-top: 96px;
     z-index: 1;
     margin-left: 10%;
     margin-right: 10%;
-  }
-  
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     color: var(--color-text);
+  }
+
+  .headerRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    width: 100%;
     z-index: 1;
   }
-  
+
   .title {
-    font-size: 60px;
+    flex: 1 1 auto;
+    margin: 0;
+    font-size: 52px;
     font-weight: 900;
-    margin-bottom: 33px;
     font-family: var(--font-roboto);
     background: linear-gradient(
       90deg,
@@ -198,148 +162,126 @@
     );
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
   }
-  
-  .description {
-    font-size: 30px;
-    font-family: var(--font-roboto);
-    margin-bottom: 52px;
-  }
-  
-  .contactBtn {
-    text-decoration: none;
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    border-radius: 100px;
-    font-size: 30px;
-    font-weight: 600;
-    padding: 17px 26px;
-    box-shadow: 0 0 4px 0 rgba(96, 55, 150, 0.644);
-    transition: transform 0.3s ease, filter 0.3s ease;  /* Smooth transition effect */
-    
-  }
-  
-  .resumeBtn {
-    text-decoration: none;
-    background-color: rgb(85, 28, 150);
-    color: var(--color-text);
-    border-radius: 100px;
-    font-size: 30px;
-    font-weight: 600;
-    padding: 17px 26px;
-    box-shadow: 0 0 4px 0 rgba(96, 55, 150, 0.644);
-    transition: transform 0.3s ease, filter 0.3s ease;  /* Smooth transition effect */
-    
-  }
-
-  .contactBtn:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
-  }
-  .resumeBtn:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
-  }
-    
-  .buttonContainer {
-    display: flex;
-    gap: 28px; /* Adjust the gap between the buttons */
- }
-
 
   .aboutImg {
-    width: 250px; /* Adjust as needed */
-    height: 250px; /* Same as width to maintain the circular shape */
-    border-radius: 50%; /* Makes it a perfect circle */
-    object-fit: cover; /* Ensures the image fits well within the circle */
-    
-    /* Add a border */
-    border: 5px solid #4CAF50; /* Change color to your preference */
-  
-    /* Add a shadow for a 3D effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  
-    /* Optional: add a hover effect */
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4caf50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+
+  .aboutImg:hover {
+    transform: scale(1.05);
+  }
+
+  .body {
+    margin-top: 36px;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1;
+  }
+
+  .description {
+    margin: 0 0 40px;
+    font-size: 26px;
+    font-family: var(--font-roboto);
+    line-height: 1.5;
+    text-align: left;
+    width: 100%;
+  }
+
+  .buttonContainer {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .contactBtn,
+  .resumeBtn {
+    text-decoration: none;
+    color: var(--color-text);
+    border-radius: 100px;
+    font-size: 26px;
+    font-weight: 600;
+    padding: 14px 24px;
+    box-shadow: 0 0 4px 0 rgba(96, 55, 150, 0.644);
     transition: transform 0.3s ease;
   }
-  
-  .aboutImg:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+
+  .contactBtn {
+    background-color: var(--color-primary);
   }
-  
-  
-  @keyframes floating {
-    0% {
-      transform: translate(0, 0px);
-    }
-    50% {
-      transform: translate(0, 10px);
-    }
-    100% {
-      transform: translate(0, -0px);
-    }
+
+  .resumeBtn {
+    background-color: rgb(85, 28, 150);
   }
-  
-  .topBlur {
+
+  .contactBtn:hover,
+  .resumeBtn:hover {
+    transform: scale(1.06);
+  }
+
+  .topBlur,
+  .bottomBlur {
     position: absolute;
+    border-radius: 764px;
+    background: rgba(25, 55, 109, 0.7);
+    filter: blur(100px);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .topBlur {
     width: 50vw;
     height: 50vw;
     min-width: 350px;
-    min-width: 350px;
     top: -128px;
     left: -10vw;
-    border-radius: 764px;
-    background: rgba(25, 55, 109, 0.7);
-    filter: blur(100px);
-    z-index: 0;
   }
-  
+
   .bottomBlur {
-    position: absolute;
     width: 70vw;
     height: 50vw;
-    min-width: 350px;
     min-width: 250px;
     top: 246px;
     right: -25vw;
-    border-radius: 764px;
-    background: rgba(25, 55, 109, 0.7);
-    filter: blur(100px);
-    z-index: 0;
   }
-  
-  
-  
-
-
-
-  /* Tablet-specific styles */
 }
 
-/* For desktops */
+/* ---------- Desktop ---------- */
 @media screen and (min-width: 1500px) {
-
   .container {
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 49px;
+    flex-direction: column;
+    margin-top: 104px;
     z-index: 1;
     margin-left: 10%;
     margin-right: 10%;
-  }
-  
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     color: var(--color-text);
+  }
+
+  .headerRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
     z-index: 1;
   }
-  
+
   .title {
-    font-size: 72px;
+    flex: 1 1 auto;
+    margin: 0;
+    font-size: 64px;
     font-weight: 900;
-    margin-bottom: 33px;
     font-family: var(--font-roboto);
     background: linear-gradient(
       90deg,
@@ -348,125 +290,95 @@
     );
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-  }
-  
-  .description {
-    font-size: 30px;
-    font-family: var(--font-roboto);
-    margin-bottom: 52px;
-  }
-  
-  .contactBtn {
-    text-decoration: none;
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    border-radius: 100px;
-    font-size: 30px;
-    font-weight: 600;
-    padding: 17px 26px;
-    box-shadow: 0 0 4px 0 rgba(96, 55, 150, 0.644);
-    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition effect */
-    
-  }
-  
-  .resumeBtn {
-    text-decoration: none;
-    background-color: rgb(85, 28, 150);
-    color: var(--color-text);
-    border-radius: 100px;
-    font-size: 30px;
-    font-weight: 600;
-    padding: 17px 26px;
-    box-shadow: 0 0 4px 0 rgba(96, 55, 150, 0.644);
-    transition: transform 0.3s ease, filter 0.3s ease;   /* Smooth transition effect */
-    
+    background-clip: text;
   }
 
-  .contactBtn:hover {
-    transform: scale(1.2); /* Slight zoom on hover */
+  .aboutImg {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #4caf50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    z-index: 1;
   }
-  .resumeBtn:hover {
-    transform: scale(1.2); /* Slight zoom on hover */
+
+  .aboutImg:hover {
+    transform: scale(1.05);
   }
+
+  .body {
+    margin-top: 44px;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1;
+  }
+
+  .description {
+    margin: 0 0 48px;
+    font-size: 28px;
+    font-family: var(--font-roboto);
+    line-height: 1.5;
+    text-align: left;
+    width: 100%;
+  }
+
   .buttonContainer {
     display: flex;
-    gap: 35px; /* Adjust the gap between the buttons */
- }
-  .aboutImg {
-    width: 550px; /* Adjust as needed */
-    height: 550px; /* Same as width to maintain the circular shape */
-    border-radius: 50%; /* Makes it a perfect circle */
-    object-fit: cover; /* Ensures the image fits well within the circle */
-    
-    /* Add a border */
-    border: 5px solid #4CAF50; /* Change color to your preference */
-  
-    /* Add a shadow for a 3D effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  
-    /* Optional: add a hover effect */
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+  .contactBtn,
+  .resumeBtn {
+    text-decoration: none;
+    color: var(--color-text);
+    border-radius: 100px;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 16px 28px;
+    box-shadow: 0 0 4px 0 rgba(96, 55, 150, 0.644);
     transition: transform 0.3s ease;
   }
-  
-  .aboutImg:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+
+  .contactBtn {
+    background-color: var(--color-primary);
   }
-  
-  
-  @keyframes floating {
-    0% {
-      transform: translate(0, 0px);
-    }
-    50% {
-      transform: translate(0, 10px);
-    }
-    100% {
-      transform: translate(0, -0px);
-    }
+
+  .resumeBtn {
+    background-color: rgb(85, 28, 150);
   }
-  
-  .topBlur {
+
+  .contactBtn:hover,
+  .resumeBtn:hover {
+    transform: scale(1.08);
+  }
+
+  .topBlur,
+  .bottomBlur {
     position: absolute;
+    border-radius: 764px;
+    background: rgba(25, 55, 109, 0.7);
+    filter: blur(100px);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .topBlur {
     width: 50vw;
     height: 50vw;
     min-width: 350px;
-    min-width: 350px;
     top: -128px;
     left: -10vw;
-    border-radius: 764px;
-    background: rgba(25, 55, 109, 0.7);
-    filter: blur(100px);
-    z-index: 0;
   }
-  
+
   .bottomBlur {
-    position: absolute;
     width: 70vw;
     height: 50vw;
-    min-width: 350px;
     min-width: 250px;
     top: 246px;
     right: -25vw;
-    border-radius: 764px;
-    background: rgba(25, 55, 109, 0.7);
-    filter: blur(100px);
-    z-index: 0;
   }
-  
-  @media screen and (max-width: 830px) {
-    .container {
-      flex-direction: column-reverse;
-    }
-  
-    .content {
-      align-items: center;
-    }
-  }
-  
-
-
-
-  /* Desktop-specific styles */
 }
-
-
