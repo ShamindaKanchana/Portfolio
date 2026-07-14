@@ -67,6 +67,9 @@
     line-height: 1.55;
     text-align: left;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55em;
   }
 
   .buttonContainer {
@@ -195,6 +198,9 @@
     line-height: 1.5;
     text-align: left;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55em;
   }
 
   .buttonContainer {
@@ -323,6 +329,9 @@
     line-height: 1.5;
     text-align: left;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55em;
   }
 
   .buttonContainer {
@@ -380,5 +389,55 @@
     min-width: 250px;
     top: 246px;
     right: -25vw;
+  }
+}
+
+/* ---------- Sentence-by-sentence reveal (all sizes) ---------- */
+@keyframes sentenceIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sentence {
+  margin: 0;
+  max-width: 100%;
+  animation: sentenceIn 0.6s ease both;
+}
+
+.buttonsHidden {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.buttonsVisible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition:
+    opacity 0.5s ease 0.1s,
+    transform 0.5s ease 0.1s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sentence {
+    animation: none !important;
+  }
+
+  .buttonsHidden,
+  .buttonsVisible {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
   }
 }

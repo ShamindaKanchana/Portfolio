@@ -61,6 +61,11 @@ export const Navbar = () => {
             </a>
           </li>
           <li>
+            <a href="#research" onClick={(e) => handleScrollToSection(e, "research")}>
+              Research
+            </a>
+          </li>
+          <li>
             <a href="#certificate" onClick={(e) => handleScrollToSection(e, "certificate")}>
               Certificates
             </a>
