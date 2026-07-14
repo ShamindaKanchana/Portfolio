@@ -1,5 +1,37 @@
 [
   {
+    "title": "VAU-CS Academic Advisor",
+    "imageSrc": "projects/vau_cs_advisor.png",
+    "description": "Intelligent academic chatbot for university students. Answers course and module questions for Computer Science and Applied Mathematics programs using Cohere, LangGraph, MySQL, and a React chat UI.",
+    "skills": ["React", "Flask", "LangGraph", "Cohere", "MySQL"],
+    "source": "https://github.com/ShamindaKanchana/vau-cs-academic-advisor",
+    "demo": "https://vau-cs-academic-advisor.vercel.app"
+  },
+  {
+    "title": "Expense Tracker",
+    "imageSrc": "projects/expense_tracker.png",
+    "description": "Full-stack expense tracking app with JWT auth, category management, monthly filters, and Chart.js analytics. Frontend on Vercel and backend on Railway.",
+    "skills": ["React", "Node.js", "Express", "MySQL", "JWT"],
+    "source": "https://github.com/ShamindaKanchana/Expense_tracker",
+    "demo": "https://expense-tracker-liard-nine.vercel.app"
+  },
+  {
+    "title": "WordBot — English Dictionary",
+    "imageSrc": "projects/wordbot.png",
+    "description": "Chat-style English dictionary app for definitions, pronunciation, usage examples, and synonyms. Built with Flask and the Free Dictionary API.",
+    "skills": ["Python", "Flask", "JavaScript", "HTML/CSS", "API"],
+    "source": "https://github.com/ShamindaKanchana/WordBot",
+    "demo": "http://shaminda.pythonanywhere.com/"
+  },
+  {
+    "title": "FunctionSpace3D (OmniGraph3D)",
+    "imageSrc": "projects/function_space_3d.png",
+    "description": "Interactive web tool to visualize math in 3D: type equations and plot surfaces, curves, and implicit shapes (e.g. spheres). Supports wireframe/solid views, orbit controls, range sliders, and time animation — built with React, Three.js, and mathjs.",
+    "skills": ["React", "Three.js", "mathjs", "JavaScript", "Vercel"],
+    "source": "https://github.com/ShamindaKanchana/FunctionSpace3D",
+    "demo": "https://function-space3-d.vercel.app"
+  },
+  {
     "title": "H2OData_Dive",
     "imageSrc": "projects/h2o.jpg",
     "description": "A machine learning-based Flask web app that predicts water potability based on key water quality indicators. This project combines data analysis, model building (RandomForestClassifier)",
@@ -7,7 +39,7 @@
     "source": "https://github.com/ShamindaKanchana/H2OData_Dive"
   },
   {
-    "title": "RealEstatePriceForecast ",
+    "title": "RealEstatePriceForecast",
     "imageSrc": "projects/forecast.png",
     "description": "This project focuses on predicting house prices in Bangalore using machine learning techniques. The goal is to build a model that accurately estimates property prices based on various features like location, square footage, number of bedrooms, and more.",
     "skills": ["Python", "Machine Learning", "Statistics"],
@@ -17,23 +49,21 @@
     "title": "SpotifyTrendsAnalyzer",
     "imageSrc": "projects/spotify.png",
     "description": "SpotifyTrendsAnalyzer is a data analytics project focused on uncovering trends within Spotify music. Analyze artist popularity, track song trends, and explore metrics like danceability and energy. Now featuring an interactive Tableau dashboard, with data preprocessed using Python and SQL for optimized insights.",
-    "skills": ["SQL", "PoweBI","Tableau","Python"],
+    "skills": ["SQL", "PowerBI", "Tableau", "Python"],
     "source": "https://github.com/ShamindaKanchana/SpotifyTrendsAnalyzer"
   },
   {
-    "title": "Placement-Insights-Unveiling-Trends-in-Student-Career-Trajectories ",
+    "title": "Placement-Insights-Unveiling-Trends-in-Student-Career-Trajectories",
     "imageSrc": "projects/stu.png",
     "description": "Analyzing student placement data at XYZ Campus to uncover trends and factors influencing career outcomes. Utilizing descriptive and predictive analytics techniques to provide insights for students, educators, and recruiters.",
-    "skills": ["Python",  "Statistics"],
+    "skills": ["Python", "Statistics"],
     "source": "https://github.com/ShamindaKanchana/Placement-Insights-Unveiling-Trends-in-Student-Career-Trajectories"
-  }
-  ,
-
+  },
   {
     "title": "GDP-and-Economic-Comparison-Sri-Lanka-vs.-USA",
     "imageSrc": "projects/econ.png",
     "description": "In this project, I conducted a comprehensive analysis of population data using Python and various data analysis libraries. Leveraging pandas for data manipulation and seaborn for visualization, I explored demographic trends and patterns within the dataset. Through careful examination of population dynamics, including growth rates and etc",
-    "skills": ["Python",  "Statistics"],
+    "skills": ["Python", "Statistics"],
     "source": "https://github.com/ShamindaKanchana/GDP-and-Economic-Comparison-Sri-Lanka-vs.-USA"
   },
   {
@@ -47,9 +77,7 @@
     "title": "Plant Disease Detection",
     "imageSrc": "projects/PlantDisease.png",
     "description": "A deep learning-based project for detecting plant diseases from leaf images using convolutional neural networks (CNNs).",
-    "skills": ["Python", "Deep Learning","CNN"],
+    "skills": ["Python", "Deep Learning", "CNN"],
     "source": "https://www.kaggle.com/code/shamindakanchana/plantdiseasedetection"
   }
-
 ]
- 

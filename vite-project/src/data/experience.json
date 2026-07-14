@@ -1,0 +1,40 @@
+[
+  {
+    "role": "Associate Software Engineer",
+    "organisation": "Idasara Digital (Pvt) Ltd",
+    "location": "Colombo, Sri Lanka",
+    "startDate": "Oct 7, 2025",
+    "endDate": "Present",
+    "type": "Full-time",
+    "highlights": [
+      "Building and maintaining production software with a focus on scalable backends and reliable deployments",
+      "Integrating AI tools into products and workflows to improve real-world user experiences",
+      "Contributing to cloud deployment, CI/CD pipelines, and observability practices"
+    ]
+  },
+  {
+    "role": "AI Intern",
+    "organisation": "DiproIT",
+    "location": "Sri Lanka",
+    "startDate": "Apr 3, 2025",
+    "endDate": "Oct 2, 2025",
+    "type": "Internship",
+    "highlights": [
+      "Implemented fingerprint enrollment and verification with the ZKTeco ZK9500 scanner (Java capture apps, template matching, and device integration)",
+      "Built biometric system components including Electron desktop UI, Java verification backend, REST APIs, and MySQL/SQLite storage for fingerprint templates",
+      "Researched and prototyped AI-assisted financial report generation (natural-language report requests, trial balance / balance sheet style outputs using LLM workflows)"
+    ]
+  },
+  {
+    "role": "BSc (Hons) in Computer Science",
+    "organisation": "University of Jaffna — Vavuniya Campus",
+    "location": "Sri Lanka",
+    "startDate": "",
+    "endDate": "Graduated",
+    "type": "Education",
+    "highlights": [
+      "Graduated with Second Class Upper Division",
+      "Focused on software engineering, AI, and data-driven systems"
+    ]
+  }
+]

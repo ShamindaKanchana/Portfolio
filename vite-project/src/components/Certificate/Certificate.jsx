@@ -15,10 +15,27 @@ import ML_modelDeploy_usingFlask from "/assets/certificate/certificates/MLmodel_
 import AI_ML from "/assets/certificate/certificates/AI_ML_slit.png";
 import AI_ML2 from "/assets/certificate/certificates/AI_ML2_slit.png";
 import IntroToDeepLearning from "/assets/certificate/certificates/intrTODeepLearning.png";
+import ClaudeCodeInAction from "/assets/certificate/certificates/Claude_code_in_action.png";
+import AIFluency from "/assets/certificate/certificates/AI_Fluency.png";
+import ClaudeWithTheAnthropicAPI from "/assets/certificate/certificates/Claude_with_the_Antrophic_API.png";
 
 export const Certificate = () => {
   const certificates = [
-   
+    {
+      src: ClaudeCodeInAction,
+      alt: "Claude Code in Action - Anthropic",
+      link: "https://verify.skilljar.com/c/3adwiczkujmp"
+    },
+    {
+      src: AIFluency,
+      alt: "AI Fluency - Anthropic",
+      link: "https://verify.skilljar.com/c/waovdgwkmfvj"
+    },
+    {
+      src: ClaudeWithTheAnthropicAPI,
+      alt: "Claude with the Anthropic API - Anthropic",
+      link: "https://verify.skilljar.com/c/czjbw7a4qwb2"
+    },
     {
       src: DataAnalytics,
       alt: "Certificate 3",

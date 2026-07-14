@@ -56,6 +56,11 @@ export const Navbar = () => {
             </a>
           </li>
           <li>
+            <a href="#experience" onClick={(e) => handleScrollToSection(e, "experience")}>
+              Experience
+            </a>
+          </li>
+          <li>
             <a href="#certificate" onClick={(e) => handleScrollToSection(e, "certificate")}>
               Certificates
             </a>

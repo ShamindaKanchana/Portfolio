@@ -8,10 +8,8 @@ export const About = () => {
       <div className={styles.content}>
         <br /><br /><br />
         <h1 className={styles.title}>Hi, I'm Shaminda</h1>
-        <p className={styles.description}> 
-        As an AI intern, I'm passionate about AI and data science, specializing in machine learning and deep learning. I love creating intelligent systems that learn from data to solve real-world problems. Committed to continuous learning, I stay updated with the latest advancements in both fields.<br /><br />
-
-          Currently pursuing a <b>BSc Honours in Computer Science at the Vavuniya Campus of the  University of Jaffna</b>, I am an undergraduate with a strong commitment to growing my knowledge and experience in the domain of data science.
+        <p className={styles.description}>
+        I am a recent software engineering graduate with Second Class Upper Division, and hands-on experience in AI, backend development, and deployment. Passionate about building scalable systems, I specialize in integrating AI tools, designing robust backends, and implementing CI/CD workflows. As an AI Intern at DiproIT I worked on ZK9500 fingerprint integration and researched AI-driven report generation; I now work as an Associate Software Engineer at Idasara Digital. I enjoy leveraging modern technologies to solve practical challenges while continuously learning and collaborating.
         </p>
         <div className={styles.buttonContainer}>
           <a href="mailto:shamindakanchana@icloud.com" className={styles.contactBtn}>
