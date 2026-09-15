@@ -72,6 +72,137 @@
           ]
         },
         {
+          "id": "part-4",
+          "part": 4,
+          "title": "The Hidden Computer Inside Your Camera — What Is an ISP?",
+          "thumbnail": "",
+          "heroImage": "",
+          "date": "2026-08-28",
+          "readMinutes": 5,
+          "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-imageprocessing-computerarchitecture-activity-7494736218044313600-zcPy",
+          "excerpt": "Part 4. Sensor → RAW → ISP. Demosaic, denoise, white balance, HDR, tone map. I'(x,y)=f(I(x,y)) over 48M pixels needs specialization.",
+          "body": [
+            { "type": "paragraph", "text": "Part 3 gave us color via Bayer + demosaicing — but who processes millions of pixels in real time? Meet the ISP (Image Signal Processor)." },
+            { "type": "paragraph", "text": "Pipeline: Camera Sensor → RAW image data → ISP → Processed image. The CPU is bypassed for pixel work." },
+            { "type": "heading", "text": "What the ISP does" },
+            { "type": "list", "items": ["Demosaicing", "Noise reduction", "White balance and color correction", "Exposure and HDR processing", "Lens distortion correction", "Sharpening and tone mapping", "Image scaling"] },
+            { "type": "paragraph", "text": "For 48 MP, a pixel-wise op I'(x,y) = f(I(x,y)) runs 48 million times — needs massive parallelism and throughput, which the ISP is built for." },
+            { "type": "quote", "text": "CPU → general purpose. GPU → parallel graphics. NPU → neural nets. ISP → image-signal stream processing. Next: Part 5 — CPU vs GPU vs NPU vs ISP." }
+          ]
+        },
+        {
+          "id": "part-5",
+          "part": 5,
+          "title": "CPU vs GPU vs NPU vs ISP — Who Processes Your Image?",
+          "thumbnail": "",
+          "heroImage": "",
+          "date": "2026-08-30",
+          "readMinutes": 4,
+          "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-computerarchitecture-imageprocessing-activity-7495856285867884544-myi5",
+          "excerpt": "Part 5. ISP = specialist, CPU = control, GPU = parallel effects, NPU = AI (face, segmentation). Same sensor, different system, different photo.",
+          "body": [
+            { "type": "paragraph", "text": "The ISP doesn't work alone. An SoC splits camera work: ISP (demosaic, denoise, white balance, HDR, tone map), CPU (control, settings, app coordination), GPU (parallel effects, transforms), NPU (face detection, segmentation, AI enhance: Frame → Net → labels)." },
+            { "type": "paragraph", "text": "Flow: Sensor → ISP → [CPU control | GPU parallel | NPU AI] → Final image. Optics + sensor + ISP + CPU + GPU + NPU + memory + software — a complete computing system." },
+            { "type": "quote", "text": "Same sensor, different system → different photo. But moving all those pixels creates a hardware challenge. Next: Part 6 — memory bandwidth." }
+          ]
+        },
+        {
+          "id": "part-6",
+          "part": 6,
+          "title": "The Hidden Bottleneck — Memory Bandwidth",
+          "thumbnail": "",
+          "heroImage": "",
+          "date": "2026-09-01",
+          "readMinutes": 4,
+          "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-computerarchitecture-memorybandwidth-activity-7498402940559339520-FzZn",
+          "excerpt": "Part 6. 4K120 10-bit ≈ 29.9 Gbps. Sensor→ISP→Memory→GPU/NPU→Encoder→Storage: fastest chip idles if memory chokes.",
+          "body": [
+            { "type": "paragraph", "text": "4K UHD is 3840×2160 = 8,294,400 px/frame. At 120 FPS ≈ 995M px/s — nearly a billion pixels per second. At 10-bit RGB (30 bits/px) ≈ 29.9 Gbps (3.74 GB/s), before HDR buffering and copies." },
+            { "type": "paragraph", "text": "Path: Sensor → ISP → Memory → GPU/NPU/CPU → Encoder → Storage. Bandwidth = data / time. Multi-frame HDR holds several RAWs + masks at once." },
+            { "type": "quote", "text": "Sensor can capture, ISP can process, GPU/NPU can compute — if memory stalls, all stall. Performance = bottleneck. Next: Part 7 — combining multiple photos." }
+          ]
+        },
+        {
+          "id": "part-7",
+          "part": 7,
+          "title": "Is a Smartphone Photo Really Just One Photo?",
+          "thumbnail": "",
+          "heroImage": "",
+          "date": "2026-09-02",
+          "readMinutes": 5,
+          "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-computationalphotography-activity-7499094263746580480-ggX8",
+          "excerpt": "Part 7. HDR: under/normal/over → I_final=F(I1,I2,I3). Night mode aligns+merges bursts. Camera reconstructs, not just captures.",
+          "body": [
+            { "type": "paragraph", "text": "The final photo may combine frames: HDR takes under (highlights) + normal + over (shadows) and merges I_final = F(I1, I2, I3). One exposure can't hold bright sky and dark foreground." },
+            { "type": "paragraph", "text": "Naive averaging ghosts on motion — needs alignment, motion rejection, exposure fusion, local tone mapping. Night mode stacks rapid frames to beat noise instead of one blurry long shot." },
+            { "type": "quote", "text": "Lens → sensor → multiple measurements → computation → image. The camera reconstructs. Where does measurement end and AI begin? Next: Part 8 — computational photography + AI." }
+          ]
+        },
+        {
+          "id": "part-8",
+          "part": 8,
+          "title": "Your Phone Camera Doesn't Just Capture — It Computes",
+          "thumbnail": "",
+          "heroImage": "",
+          "date": "2026-09-03",
+          "readMinutes": 5,
+          "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-computationalphotography-activity-7499459554577928194-lEDO",
+          "excerpt": "Part 8. Classic ops + segmentation mask I_out=M·Isubject+(1−M)·Ibg. Photo = measurement + processing + fusion + AI estimate. NPU runs Y=f(WX+b).",
+          "body": [
+            { "type": "paragraph", "text": "Beyond capture the phone asks what is in the scene. Classic ops (white balance, denoise, HDR merge, tone map, e.g. [R',G',B'] = M×[R,G,B]) plus AI segmentation: frame → net → per-pixel labels [subject|sky|background]." },
+            { "type": "paragraph", "text": "Scene-aware: subject sharp + skin tones, background bokeh, sky de-highlighted: I_out(x,y) = M·I_subject + (1−M)·I_background. NPU accelerates Y = f(WX+b)." },
+            { "type": "quote", "text": "AI estimates, not recovers, missing photons. Photo = measurement + processing + fusion + estimation. Next: Part 9 — what does 240 FPS demand?" }
+          ]
+        },
+        {
+          "id": "part-9",
+          "part": 9,
+          "title": "What Does 240 FPS Really Mean?",
+          "thumbnail": "",
+          "heroImage": "",
+          "date": "2026-09-04",
+          "readMinutes": 4,
+          "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-slowmotion-computervision-activity-7500122415004340224-FPfB",
+          "excerpt": "Part 9. 240/30 = 8× slow-mo. 1080p240 ≈ 498M px/s. 4K caps at 60 FPS. HW 960 FPS (stacked DRAM) ≠ AI-interpolated 960 FPS.",
+          "body": [
+            { "type": "paragraph", "text": "240 FPS played at 30 FPS = 240/30 = 8× slowdown: 1 s becomes 8 s. True 240 FPS must be captured: sensor → readout → ISP → memory → processing → encoder → storage." },
+            { "type": "paragraph", "text": "1080p (1920×1080 = 2,073,600 px) at 240 FPS ≈ 498M px/s plus ISP/memory. Hence 4K→60 FPS, 1080p→240 FPS. HW 960 FPS uses stacked sensor DRAM bursts; SW 960 FPS interpolates (Real A → AI frame → Real B)." },
+            { "type": "quote", "text": "More pixels × more frames = enormous throughput. Next: Part 10 — compressing billions of pixels to MBs." }
+          ]
+        },
+        {
+          "id": "part-10",
+          "part": 10,
+          "title": "How Does a Camera Turn Billions of Pixels Into a Small File?",
+          "thumbnail": "",
+          "heroImage": "",
+          "date": "2026-09-05",
+          "readMinutes": 5,
+          "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-imagecompression-videocompression-activity-7500562382964805632-KaW-",
+          "excerpt": "Part 10. 24 MP = 72 MB/frame; 30 FPS = 2.16 GB/s raw. DCT + quantization + entropy; H.264/H.265/AV1 motion+residual. HW encoders save battery.",
+          "body": [
+            { "type": "paragraph", "text": "One 24 MP RGB frame (3 bytes/px) = 72 MB. At 30 FPS that's 2.16 GB/s raw — phones would fill instantly. Images: RGB → YCbCr → 8×8 blocks → DCT → quantization → entropy coding; DCT drops high frequencies eyes miss." },
+            { "type": "paragraph", "text": "Video reuses frames: Frame(t+1) ≈ Frame(t) + motion/residual (H.264, H.265/HEVC, AV1). Lossless restores exactly; lossy approximates — re-saving JPEGs artifacts. SoC HW encoders do it live without draining CPU." },
+            { "type": "quote", "text": "Photons → sensor → data → demosaic → ISP → processors → memory → high FPS → compression. Next: Part 11 — the complete architecture." }
+          ]
+        },
+        {
+          "id": "part-11",
+          "part": 11,
+          "title": "From Photons to a Photo — The Complete Architecture",
+          "thumbnail": "",
+          "heroImage": "",
+          "date": "2026-09-06",
+          "readMinutes": 5,
+          "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-computerarchitecture-imageprocessing-activity-7501288515104845825-zvdt",
+          "excerpt": "Part 11. Shutter recap: lens → sensor+ADC → ISP → CPU/GPU/NPU → memory+multi-frame → codec → storage. Camera = sensing+compute system.",
+          "body": [
+            { "type": "paragraph", "text": "Press shutter: scene → photons → lens → CMOS photodiodes → ADC numbers. ISP: demosaic, denoise, white balance, HDR, tone map. CPU controls, GPU parallels, NPU segments. Memory shuttles; HDR/night merge I_final = F(I1..In). Encoder writes JPEG/HEIF, H.265/AV1." },
+            { "type": "paragraph", "text": "Lens captures, sensor measures, ISP processes, CPU coordinates, GPU accelerates, NPU handles AI, memory moves data, codec compresses, software sets the look." },
+            { "type": "quote", "text": "Same sensor, different photos — why? Final: Part 12." }
+          ]
+        },
+        {
           "id": "part-12",
           "part": 12,
           "title": "Why Two Phones With Similar Cameras Take Different Photos",
