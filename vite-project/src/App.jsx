@@ -7,6 +7,7 @@ import { Experience } from "./components/Experience/Experience";
 import { Research } from "./components/Research/Research";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Projects } from "./components/Projects/Projects";
+import { Blogs } from "./components/Blogs/Blogs";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Certificate />
       <Badges />
       <Projects />
+      <Blogs />
       <Contact />
     </div>
   );

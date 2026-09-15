@@ -1,0 +1,90 @@
+{
+  "series": [
+    {
+      "id": "grafana-metrics",
+      "title": "Understanding Grafana Metrics",
+      "description": "15-part series moving from single metrics to metric families, app behavior, infrastructure and root-cause troubleshooting. Goal: stop memorizing metric names, start understanding the story behind the numbers.",
+      "coverImage": "",
+      "tags": ["Grafana", "Prometheus", "DevOps", "Observability", "SRE"],
+      "episodes": [
+        {
+          "id": "part-1",
+          "part": 1,
+          "title": "Why Does This Number Change?",
+          "thumbnail": "",
+          "heroImage": "",
+          "date": "2026-09-12",
+          "readMinutes": 4,
+          "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_grafana-prometheus-devops-activity-7504458396448894976-On0c",
+          "excerpt": "A metric is a live reflection of an event in your app. Trace a real request: Nginx → Django → DB → Prometheus → Grafana.",
+          "body": [
+            { "type": "paragraph", "text": "If you've worked with Grafana, you've seen dashboards filled with charts: CPU usage, request latency, DB queries, HTTP requests. But have you ever stopped to ask: what actually makes this value change?" },
+            { "type": "paragraph", "text": "A metric isn't just a random number on a panel. It's a live reflection of an event inside your application." },
+            { "type": "heading", "text": "Trace a real user request" },
+            { "type": "list", "items": ["User sends a request", "Nginx receives it", "Django processes it", "DB query executes", "Metric counter updates", "Prometheus scrapes data", "Grafana plots the line"] },
+            { "type": "paragraph", "text": "So when django_db_execute_total moves, it's not generic activity. It means a specific database execution just happened." },
+            { "type": "heading", "text": "The debugging lesson" },
+            { "type": "paragraph", "text": "When latency spikes, that single number won't tell you the root cause. Debugging isn't reading numbers, it's connecting the dots:" },
+            { "type": "quote", "text": "HTTP Latency → Django View → DB Query Duration → DB Connections → CPU Usage" },
+            { "type": "paragraph", "text": "The real power of observability comes from understanding how these metrics relate to each other." }
+          ]
+        },
+        {
+          "id": "part-2",
+          "part": 2,
+          "title": "Counter, Gauge, Histogram & Summary",
+          "thumbnail": "",
+          "heroImage": "",
+          "date": "2026-09-13",
+          "readMinutes": 5,
+          "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_grafana-prometheus-devops-activity-7504881560471392256-ho5o",
+          "excerpt": "Not all metrics behave the same. Counter only goes up, Gauge moves up and down, Histogram buckets latency, Summary pre-computes quantiles.",
+          "body": [
+            { "type": "paragraph", "text": "Before you start reading Grafana charts, there's a core rule: not all metrics behave the same way. A value that only increases (like total errors) must be interpreted differently from a value that goes up and down (like CPU usage)." },
+            { "type": "heading", "text": "1. Counter — How many have happened total?" },
+            { "type": "list", "items": ["Only goes UP (or resets to 0 on restart)", "Tracks accumulative totals: 0 → 10 → 25 → 83", "Examples: total requests, total errors, django_db_execute_total"] },
+            { "type": "paragraph", "text": "Tip: look at the rate of change, not just the raw total." },
+            { "type": "heading", "text": "2. Gauge — What is the value right now?" },
+            { "type": "list", "items": ["Moves UP and DOWN dynamically", "Point-in-time snapshot", "Examples: CPU 40% → 75% → 52%, memory, active DB connections, queue size"] },
+            { "type": "heading", "text": "3. Histogram — How are observations distributed?" },
+            { "type": "paragraph", "text": "Essential for latency. Don't rely on averages. Groups data into buckets (e.g. how many requests took ≤0.1s, ≤0.5s, ≤2s). Exposes _bucket, _count and _sum." },
+            { "type": "heading", "text": "4. Summary — What are the calculated quantiles?" },
+            { "type": "paragraph", "text": "Also for latency, but calculates percentiles client-side. Example: p50 = 0.2s, p90 = 0.7s, p99 = 2.4s. Directly answers: how slow are my worst-case requests?" },
+            { "type": "heading", "text": "Cheat sheet" },
+            { "type": "list", "items": ["Counter → accumulated total", "Gauge → current state", "Histogram → raw distribution into buckets", "Summary → pre-calculated percentiles"] },
+            { "type": "quote", "text": "django_db_execute_total and django_db_query_duration_seconds_bucket are both database metrics, but need different functions (rate() vs histogram_quantile()) to chart correctly. Know your metric type before you build your panel." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "camera-architecture",
+      "title": "Camera Architecture",
+      "description": "12-part series from photons to final image: what 48 MP actually means, optics, sensor, ISP, compute, algorithms and software tuning.",
+      "coverImage": "",
+      "tags": ["CameraTechnology", "ComputerScience", "ComputerArchitecture", "ImageProcessing"],
+      "episodes": [
+        {
+          "id": "part-12",
+          "part": 12,
+          "title": "Why Two Phones With Similar Cameras Take Different Photos",
+          "thumbnail": "",
+          "heroImage": "",
+          "date": "2026-09-08",
+          "readMinutes": 4,
+          "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-computerscience-computerarchitecture-activity-7501628243385458689-sWZR",
+          "excerpt": "Final part. The sensor is only one part: optics, ISP, compute, algorithms and tuning define the photo. 48 MP isn't the photograph.",
+          "body": [
+            { "type": "paragraph", "text": "We started this series asking: what does 48 MP actually mean? 12 parts later, one final question: if two phones use similar sensors, why do their photos look completely different?" },
+            { "type": "paragraph", "text": "The answer is simple: the sensor is only one part of the camera system." },
+            { "type": "heading", "text": "What actually defines a camera?" },
+            { "type": "list", "items": ["Optics — lens sharpness, distortion, light transmission", "Sensor — pixel pitch, dynamic range, bit depth, size: 48 MP A ≠ 48 MP B", "ISP — demosaicing, noise reduction, white balance, tone mapping: RAW ≠ final photo", "Silicon & compute — CPU + GPU + NPU + ISP sharing real-time workloads", "Algorithms — HDR, Night Mode, portrait segmentation, super-resolution", "Software tuning — color profiles, contrast, skin-tone choices"] },
+            { "type": "quote", "text": "Camera Performance = f(Optics, Sensor, ISP, Compute, Memory, Algorithms, Software)" },
+            { "type": "paragraph", "text": "Physics provides photons → sensor measures → electronics digitizes → ISP processes → compute accelerates → memory moves data → algorithms reconstruct → codecs compress → software displays." },
+            { "type": "paragraph", "text": "Does 200 MP beat 48 MP? No. More megapixels give more samples, but quality depends on the entire pipeline. 48 MP isn't the photograph, it's just one number in a larger system." }
+          ]
+        }
+      ]
+    }
+  ]
+}
