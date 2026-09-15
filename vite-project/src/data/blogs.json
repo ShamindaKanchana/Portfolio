@@ -53,6 +53,25 @@
           ]
         },
         {
+          "id": "part-3",
+          "part": 3,
+          "title": "How Does a Camera Create Color?",
+          "thumbnail": "/blogs/camera-architecture/p3.png",
+          "heroImage": "/blogs/camera-architecture/p3.png",
+          "date": "2026-08-25",
+          "readMinutes": 5,
+          "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-imageprocessing-computervision-activity-7494307972836114432-wuV2",
+          "excerpt": "Part 3. Sensor measures R OR G OR B via Bayer CFA (50% G, 25% R, 25% B). Demosaicing estimates full RGB. Photo = computation already.",
+          "body": [
+            { "type": "paragraph", "text": "In Part 2 the sensor gave us numbers — but a pixel measures R OR G OR B, not full RGB. How does the camera make a normal color image? Via a Color Filter Array (CFA)." },
+            { "type": "heading", "text": "The Bayer pattern" },
+            { "type": "paragraph", "text": "Each photosite sees one filter: green, red or blue. So the sensor holds R OR G OR B per site, not [R,G,B]. Split is ~50% green, 25% red, 25% blue — green carries luminance/detail for human vision." },
+            { "type": "heading", "text": "Missing information" },
+            { "type": "paragraph", "text": "At a red site R is measured but G and B are unknown. The camera estimates them from neighbours. This is demosaicing: raw mosaic → every pixel gets estimated [R̂, Ĝ, B̂]." },
+            { "type": "quote", "text": "Photons → measurements → color filtering → ADC → demosaicing → RGB image. Still missing HDR, night mode, denoise, color, sharpening, AI. Next: Part 4 — the hidden computer: what is an ISP?" }
+          ]
+        },
+        {
           "id": "part-12",
           "part": 12,
           "title": "Why Two Phones With Similar Cameras Take Different Photos",
