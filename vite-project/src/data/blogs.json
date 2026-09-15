@@ -30,6 +30,29 @@
           ]
         },
         {
+          "id": "part-2",
+          "part": 2,
+          "title": "What Is Actually Happening Inside a Camera Pixel?",
+          "thumbnail": "/blogs/camera-architecture/p2.png",
+          "heroImage": "/blogs/camera-architecture/p2.png",
+          "date": "2026-08-20",
+          "readMinutes": 4,
+          "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-imageprocessing-computervision-activity-7493554817714270208-rJ5J",
+          "excerpt": "Part 2. A camera detects light: photons → charge → signal → ADC number (e.g. 1837). I(x,y) starts as measurements, not colors.",
+          "body": [
+            { "type": "paragraph", "text": "In Part 1 we established 48 MP means roughly 48 million samples. Deeper question: where does each pixel value come from? It starts with photons — a camera detects light." },
+            { "type": "heading", "text": "Step 1 — Light enters" },
+            { "type": "paragraph", "text": "Scene → Lens → Sensor. The lens focuses light onto a CMOS sensor with millions of light-sensitive elements." },
+            { "type": "heading", "text": "Step 2 — Pixel receives photons" },
+            { "type": "paragraph", "text": "A pixel holds a photodiode. Photons generate charge: Photon → Electron → Electrical charge. More photons = more charge. The sensor measures how much light reached each location." },
+            { "type": "heading", "text": "Step 3 — Light becomes signal" },
+            { "type": "paragraph", "text": "Pixel A: 1,000 photons vs Pixel B: 10,000 photons — B accumulates more charge and a larger signal. Transformation: Light intensity → Electrical signal (not digital yet)." },
+            { "type": "heading", "text": "Step 4 — Analog becomes digital" },
+            { "type": "paragraph", "text": "The ADC converts the analog signal to a number. With 12-bit ADC: 2^12 = 4,096 levels (0–4095). A pixel becomes e.g. 1837. For grayscale: I(x, y) = measured light at (x, y)." },
+            { "type": "quote", "text": "A typical pixel measures intensity only — not red, green and blue. So how does the camera make full RGB? Next: Bayer filter and demosaicing (Part 3)." }
+          ]
+        },
+        {
           "id": "part-12",
           "part": 12,
           "title": "Why Two Phones With Similar Cameras Take Different Photos",
