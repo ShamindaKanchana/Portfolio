@@ -1,6 +1,57 @@
 {
   "series": [
     {
+      "id": "camera-architecture",
+      "title": "Camera Architecture",
+      "description": "12-part series from photons to final image: what 48 MP actually means, optics, sensor, ISP, compute, algorithms and software tuning.",
+      "coverImage": "",
+      "tags": ["CameraTechnology", "ComputerScience", "ComputerArchitecture", "ImageProcessing"],
+      "episodes": [
+        {
+          "id": "part-1",
+          "part": 1,
+          "title": "What Does 48 Megapixels Actually Mean?",
+          "thumbnail": "",
+          "heroImage": "",
+          "date": "2026-08-15",
+          "readMinutes": 4,
+          "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-computerscience-imageprocessing-activity-7491843830950907905-aA02",
+          "excerpt": "First one. 48 MP = ~48 million pixels (e.g. 8000×6000). Pixel = [R,G,B]. More pixels ≠ automatically more detail.",
+          "body": [
+            { "type": "paragraph", "text": "When a smartphone says 48 MP camera, what exactly are those 48 million? It doesn't mean 48 million colors, 48x zoom, or automatically better quality." },
+            { "type": "paragraph", "text": "It means the sensor can produce roughly 48,000,000 pixels. Example: 8000 x 6000 = 48,000,000, so 48,000,000 / 1,000,000 = 48 MP. Megapixels = (Width x Height) / 1,000,000." },
+            { "type": "heading", "text": "But what is a pixel?" },
+            { "type": "paragraph", "text": "A digital image is a 2D matrix I(x, y). For color, a pixel eventually holds Pixel = [R, G, B]. So a 48 MP RGB image holds about 48,000,000 x 3 = 144 million channel values before other representations and processing." },
+            { "type": "heading", "text": "Does more MP mean better quality?" },
+            { "type": "paragraph", "text": "Not necessarily. Quality depends on sensor size, pixel pitch, lens quality, noise, dynamic range, bit depth, ISP and computational photography. More pixels does not automatically mean more detail if the lens cannot resolve it or noise dominates." },
+            { "type": "heading", "text": "Megapixels ≠ Megabytes" },
+            { "type": "paragraph", "text": "Megapixels count spatial samples. Storage depends on bits per pixel and encoding. Example: 24 MP RGB at 8 bits per channel is about 24,000,000 x 3 bytes ≈ 72 MB uncompressed — JPEG reduces this dramatically." },
+            { "type": "quote", "text": "If a sensor produces tens of millions of measurements, how does a phone process it in real time? Next: what happens inside a single pixel — photons → electrons → signals → digital values." }
+          ]
+        },
+        {
+          "id": "part-12",
+          "part": 12,
+          "title": "Why Two Phones With Similar Cameras Take Different Photos",
+          "thumbnail": "",
+          "heroImage": "",
+          "date": "2026-09-08",
+          "readMinutes": 4,
+          "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-computerscience-computerarchitecture-activity-7501628243385458689-sWZR",
+          "excerpt": "Final part. The sensor is only one part: optics, ISP, compute, algorithms and tuning define the photo. 48 MP isn't the photograph.",
+          "body": [
+            { "type": "paragraph", "text": "We started this series asking: what does 48 MP actually mean? 12 parts later, one final question: if two phones use similar sensors, why do their photos look completely different?" },
+            { "type": "paragraph", "text": "The answer is simple: the sensor is only one part of the camera system." },
+            { "type": "heading", "text": "What actually defines a camera?" },
+            { "type": "list", "items": ["Optics — lens sharpness, distortion, light transmission", "Sensor — pixel pitch, dynamic range, bit depth, size: 48 MP A ≠ 48 MP B", "ISP — demosaicing, noise reduction, white balance, tone mapping: RAW ≠ final photo", "Silicon & compute — CPU + GPU + NPU + ISP sharing real-time workloads", "Algorithms — HDR, Night Mode, portrait segmentation, super-resolution", "Software tuning — color profiles, contrast, skin-tone choices"] },
+            { "type": "quote", "text": "Camera Performance = f(Optics, Sensor, ISP, Compute, Memory, Algorithms, Software)" },
+            { "type": "paragraph", "text": "Physics provides photons → sensor measures → electronics digitizes → ISP processes → compute accelerates → memory moves data → algorithms reconstruct → codecs compress → software displays." },
+            { "type": "paragraph", "text": "Does 200 MP beat 48 MP? No. More megapixels give more samples, but quality depends on the entire pipeline. 48 MP isn't the photograph, it's just one number in a larger system." }
+          ]
+        }
+      ]
+    },
+    {
       "id": "grafana-metrics",
       "title": "Understanding Grafana Metrics",
       "description": "15-part series moving from single metrics to metric families, app behavior, infrastructure and root-cause troubleshooting. Goal: stop memorizing metric names, start understanding the story behind the numbers.",
@@ -53,35 +104,6 @@
             { "type": "heading", "text": "Cheat sheet" },
             { "type": "list", "items": ["Counter → accumulated total", "Gauge → current state", "Histogram → raw distribution into buckets", "Summary → pre-calculated percentiles"] },
             { "type": "quote", "text": "django_db_execute_total and django_db_query_duration_seconds_bucket are both database metrics, but need different functions (rate() vs histogram_quantile()) to chart correctly. Know your metric type before you build your panel." }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "camera-architecture",
-      "title": "Camera Architecture",
-      "description": "12-part series from photons to final image: what 48 MP actually means, optics, sensor, ISP, compute, algorithms and software tuning.",
-      "coverImage": "",
-      "tags": ["CameraTechnology", "ComputerScience", "ComputerArchitecture", "ImageProcessing"],
-      "episodes": [
-        {
-          "id": "part-12",
-          "part": 12,
-          "title": "Why Two Phones With Similar Cameras Take Different Photos",
-          "thumbnail": "",
-          "heroImage": "",
-          "date": "2026-09-08",
-          "readMinutes": 4,
-          "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-computerscience-computerarchitecture-activity-7501628243385458689-sWZR",
-          "excerpt": "Final part. The sensor is only one part: optics, ISP, compute, algorithms and tuning define the photo. 48 MP isn't the photograph.",
-          "body": [
-            { "type": "paragraph", "text": "We started this series asking: what does 48 MP actually mean? 12 parts later, one final question: if two phones use similar sensors, why do their photos look completely different?" },
-            { "type": "paragraph", "text": "The answer is simple: the sensor is only one part of the camera system." },
-            { "type": "heading", "text": "What actually defines a camera?" },
-            { "type": "list", "items": ["Optics — lens sharpness, distortion, light transmission", "Sensor — pixel pitch, dynamic range, bit depth, size: 48 MP A ≠ 48 MP B", "ISP — demosaicing, noise reduction, white balance, tone mapping: RAW ≠ final photo", "Silicon & compute — CPU + GPU + NPU + ISP sharing real-time workloads", "Algorithms — HDR, Night Mode, portrait segmentation, super-resolution", "Software tuning — color profiles, contrast, skin-tone choices"] },
-            { "type": "quote", "text": "Camera Performance = f(Optics, Sensor, ISP, Compute, Memory, Algorithms, Software)" },
-            { "type": "paragraph", "text": "Physics provides photons → sensor measures → electronics digitizes → ISP processes → compute accelerates → memory moves data → algorithms reconstruct → codecs compress → software displays." },
-            { "type": "paragraph", "text": "Does 200 MP beat 48 MP? No. More megapixels give more samples, but quality depends on the entire pipeline. 48 MP isn't the photograph, it's just one number in a larger system." }
           ]
         }
       ]
