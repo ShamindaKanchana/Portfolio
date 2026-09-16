@@ -5,7 +5,12 @@
       "title": "Camera Architecture",
       "description": "12-part series from photons to final image: what 48 MP actually means, optics, sensor, ISP, compute, algorithms and software tuning.",
       "coverImage": "",
-      "tags": ["CameraTechnology", "ComputerScience", "ComputerArchitecture", "ImageProcessing"],
+      "tags": [
+        "CameraTechnology",
+        "ComputerScience",
+        "ComputerArchitecture",
+        "ImageProcessing"
+      ],
       "episodes": [
         {
           "id": "part-1",
@@ -18,15 +23,42 @@
           "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-computerscience-imageprocessing-activity-7491843830950907905-aA02",
           "excerpt": "First one. 48 MP = ~48 million pixels (e.g. 8000×6000). Pixel = [R,G,B]. More pixels ≠ automatically more detail.",
           "body": [
-            { "type": "paragraph", "text": "When a smartphone says 48 MP camera, what exactly are those 48 million? It doesn't mean 48 million colors, 48x zoom, or automatically better quality." },
-            { "type": "paragraph", "text": "It means the sensor can produce roughly 48,000,000 pixels. Example: 8000 x 6000 = 48,000,000, so 48,000,000 / 1,000,000 = 48 MP. Megapixels = (Width x Height) / 1,000,000." },
-            { "type": "heading", "text": "But what is a pixel?" },
-            { "type": "paragraph", "text": "A digital image is a 2D matrix I(x, y). For color, a pixel eventually holds Pixel = [R, G, B]. So a 48 MP RGB image holds about 48,000,000 x 3 = 144 million channel values before other representations and processing." },
-            { "type": "heading", "text": "Does more MP mean better quality?" },
-            { "type": "paragraph", "text": "Not necessarily. Quality depends on sensor size, pixel pitch, lens quality, noise, dynamic range, bit depth, ISP and computational photography. More pixels does not automatically mean more detail if the lens cannot resolve it or noise dominates." },
-            { "type": "heading", "text": "Megapixels ≠ Megabytes" },
-            { "type": "paragraph", "text": "Megapixels count spatial samples. Storage depends on bits per pixel and encoding. Example: 24 MP RGB at 8 bits per channel is about 24,000,000 x 3 bytes ≈ 72 MB uncompressed — JPEG reduces this dramatically." },
-            { "type": "quote", "text": "If a sensor produces tens of millions of measurements, how does a phone process it in real time? Next: what happens inside a single pixel — photons → electrons → signals → digital values." }
+            {
+              "type": "paragraph",
+              "text": "When a smartphone says 48 MP camera, what exactly are those 48 million? It doesn't mean 48 million colors, 48x zoom, or automatically better quality."
+            },
+            {
+              "type": "paragraph",
+              "text": "It means the sensor can produce roughly 48,000,000 pixels. Example: 8000 x 6000 = 48,000,000, so 48,000,000 / 1,000,000 = 48 MP. Megapixels = (Width x Height) / 1,000,000."
+            },
+            {
+              "type": "heading",
+              "text": "But what is a pixel?"
+            },
+            {
+              "type": "paragraph",
+              "text": "A digital image is a 2D matrix I(x, y). For color, a pixel eventually holds Pixel = [R, G, B]. So a 48 MP RGB image holds about 48,000,000 x 3 = 144 million channel values before other representations and processing."
+            },
+            {
+              "type": "heading",
+              "text": "Does more MP mean better quality?"
+            },
+            {
+              "type": "paragraph",
+              "text": "Not necessarily. Quality depends on sensor size, pixel pitch, lens quality, noise, dynamic range, bit depth, ISP and computational photography. More pixels does not automatically mean more detail if the lens cannot resolve it or noise dominates."
+            },
+            {
+              "type": "heading",
+              "text": "Megapixels ≠ Megabytes"
+            },
+            {
+              "type": "paragraph",
+              "text": "Megapixels count spatial samples. Storage depends on bits per pixel and encoding. Example: 24 MP RGB at 8 bits per channel is about 24,000,000 x 3 bytes ≈ 72 MB uncompressed — JPEG reduces this dramatically."
+            },
+            {
+              "type": "quote",
+              "text": "If a sensor produces tens of millions of measurements, how does a phone process it in real time? Next: what happens inside a single pixel — photons → electrons → signals → digital values."
+            }
           ]
         },
         {
@@ -40,16 +72,46 @@
           "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-imageprocessing-computervision-activity-7493554817714270208-rJ5J",
           "excerpt": "Part 2. A camera detects light: photons → charge → signal → ADC number (e.g. 1837). I(x,y) starts as measurements, not colors.",
           "body": [
-            { "type": "paragraph", "text": "In Part 1 we established 48 MP means roughly 48 million samples. Deeper question: where does each pixel value come from? It starts with photons — a camera detects light." },
-            { "type": "heading", "text": "Step 1 — Light enters" },
-            { "type": "paragraph", "text": "Scene → Lens → Sensor. The lens focuses light onto a CMOS sensor with millions of light-sensitive elements." },
-            { "type": "heading", "text": "Step 2 — Pixel receives photons" },
-            { "type": "paragraph", "text": "A pixel holds a photodiode. Photons generate charge: Photon → Electron → Electrical charge. More photons = more charge. The sensor measures how much light reached each location." },
-            { "type": "heading", "text": "Step 3 — Light becomes signal" },
-            { "type": "paragraph", "text": "Pixel A: 1,000 photons vs Pixel B: 10,000 photons — B accumulates more charge and a larger signal. Transformation: Light intensity → Electrical signal (not digital yet)." },
-            { "type": "heading", "text": "Step 4 — Analog becomes digital" },
-            { "type": "paragraph", "text": "The ADC converts the analog signal to a number. With 12-bit ADC: 2^12 = 4,096 levels (0–4095). A pixel becomes e.g. 1837. For grayscale: I(x, y) = measured light at (x, y)." },
-            { "type": "quote", "text": "A typical pixel measures intensity only — not red, green and blue. So how does the camera make full RGB? Next: Bayer filter and demosaicing (Part 3)." }
+            {
+              "type": "paragraph",
+              "text": "In Part 1 we established 48 MP means roughly 48 million samples. Deeper question: where does each pixel value come from? It starts with photons — a camera detects light."
+            },
+            {
+              "type": "heading",
+              "text": "Step 1 — Light enters"
+            },
+            {
+              "type": "paragraph",
+              "text": "Scene → Lens → Sensor. The lens focuses light onto a CMOS sensor with millions of light-sensitive elements."
+            },
+            {
+              "type": "heading",
+              "text": "Step 2 — Pixel receives photons"
+            },
+            {
+              "type": "paragraph",
+              "text": "A pixel holds a photodiode. Photons generate charge: Photon → Electron → Electrical charge. More photons = more charge. The sensor measures how much light reached each location."
+            },
+            {
+              "type": "heading",
+              "text": "Step 3 — Light becomes signal"
+            },
+            {
+              "type": "paragraph",
+              "text": "Pixel A: 1,000 photons vs Pixel B: 10,000 photons — B accumulates more charge and a larger signal. Transformation: Light intensity → Electrical signal (not digital yet)."
+            },
+            {
+              "type": "heading",
+              "text": "Step 4 — Analog becomes digital"
+            },
+            {
+              "type": "paragraph",
+              "text": "The ADC converts the analog signal to a number. With 12-bit ADC: 2^12 = 4,096 levels (0–4095). A pixel becomes e.g. 1837. For grayscale: I(x, y) = measured light at (x, y)."
+            },
+            {
+              "type": "quote",
+              "text": "A typical pixel measures intensity only — not red, green and blue. So how does the camera make full RGB? Next: Bayer filter and demosaicing (Part 3)."
+            }
           ]
         },
         {
@@ -63,163 +125,298 @@
           "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-imageprocessing-computervision-activity-7494307972836114432-wuV2",
           "excerpt": "Part 3. Sensor measures R OR G OR B via Bayer CFA (50% G, 25% R, 25% B). Demosaicing estimates full RGB. Photo = computation already.",
           "body": [
-            { "type": "paragraph", "text": "In Part 2 the sensor gave us numbers — but a pixel measures R OR G OR B, not full RGB. How does the camera make a normal color image? Via a Color Filter Array (CFA)." },
-            { "type": "heading", "text": "The Bayer pattern" },
-            { "type": "paragraph", "text": "Each photosite sees one filter: green, red or blue. So the sensor holds R OR G OR B per site, not [R,G,B]. Split is ~50% green, 25% red, 25% blue — green carries luminance/detail for human vision." },
-            { "type": "heading", "text": "Missing information" },
-            { "type": "paragraph", "text": "At a red site R is measured but G and B are unknown. The camera estimates them from neighbours. This is demosaicing: raw mosaic → every pixel gets estimated [R̂, Ĝ, B̂]." },
-            { "type": "quote", "text": "Photons → measurements → color filtering → ADC → demosaicing → RGB image. Still missing HDR, night mode, denoise, color, sharpening, AI. Next: Part 4 — the hidden computer: what is an ISP?" }
+            {
+              "type": "paragraph",
+              "text": "In Part 2 the sensor gave us numbers — but a pixel measures R OR G OR B, not full RGB. How does the camera make a normal color image? Via a Color Filter Array (CFA)."
+            },
+            {
+              "type": "heading",
+              "text": "The Bayer pattern"
+            },
+            {
+              "type": "paragraph",
+              "text": "Each photosite sees one filter: green, red or blue. So the sensor holds R OR G OR B per site, not [R,G,B]. Split is ~50% green, 25% red, 25% blue — green carries luminance/detail for human vision."
+            },
+            {
+              "type": "heading",
+              "text": "Missing information"
+            },
+            {
+              "type": "paragraph",
+              "text": "At a red site R is measured but G and B are unknown. The camera estimates them from neighbours. This is demosaicing: raw mosaic → every pixel gets estimated [R̂, Ĝ, B̂]."
+            },
+            {
+              "type": "quote",
+              "text": "Photons → measurements → color filtering → ADC → demosaicing → RGB image. Still missing HDR, night mode, denoise, color, sharpening, AI. Next: Part 4 — the hidden computer: what is an ISP?"
+            }
           ]
         },
         {
           "id": "part-4",
           "part": 4,
           "title": "The Hidden Computer Inside Your Camera — What Is an ISP?",
-          "thumbnail": "",
-          "heroImage": "",
+          "thumbnail": "/blogs/camera-architecture/p4.jpeg",
+          "heroImage": "/blogs/camera-architecture/p4.jpeg",
           "date": "2026-08-28",
           "readMinutes": 5,
           "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-imageprocessing-computerarchitecture-activity-7494736218044313600-zcPy",
           "excerpt": "Part 4. Sensor → RAW → ISP. Demosaic, denoise, white balance, HDR, tone map. I'(x,y)=f(I(x,y)) over 48M pixels needs specialization.",
           "body": [
-            { "type": "paragraph", "text": "Part 3 gave us color via Bayer + demosaicing — but who processes millions of pixels in real time? Meet the ISP (Image Signal Processor)." },
-            { "type": "paragraph", "text": "Pipeline: Camera Sensor → RAW image data → ISP → Processed image. The CPU is bypassed for pixel work." },
-            { "type": "heading", "text": "What the ISP does" },
-            { "type": "list", "items": ["Demosaicing", "Noise reduction", "White balance and color correction", "Exposure and HDR processing", "Lens distortion correction", "Sharpening and tone mapping", "Image scaling"] },
-            { "type": "paragraph", "text": "For 48 MP, a pixel-wise op I'(x,y) = f(I(x,y)) runs 48 million times — needs massive parallelism and throughput, which the ISP is built for." },
-            { "type": "quote", "text": "CPU → general purpose. GPU → parallel graphics. NPU → neural nets. ISP → image-signal stream processing. Next: Part 5 — CPU vs GPU vs NPU vs ISP." }
+            {
+              "type": "paragraph",
+              "text": "Part 3 gave us color via Bayer + demosaicing — but who processes millions of pixels in real time? Meet the ISP (Image Signal Processor)."
+            },
+            {
+              "type": "paragraph",
+              "text": "Pipeline: Camera Sensor → RAW image data → ISP → Processed image. The CPU is bypassed for pixel work."
+            },
+            {
+              "type": "heading",
+              "text": "What the ISP does"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Demosaicing",
+                "Noise reduction",
+                "White balance and color correction",
+                "Exposure and HDR processing",
+                "Lens distortion correction",
+                "Sharpening and tone mapping",
+                "Image scaling"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "For 48 MP, a pixel-wise op I'(x,y) = f(I(x,y)) runs 48 million times — needs massive parallelism and throughput, which the ISP is built for."
+            },
+            {
+              "type": "quote",
+              "text": "CPU → general purpose. GPU → parallel graphics. NPU → neural nets. ISP → image-signal stream processing. Next: Part 5 — CPU vs GPU vs NPU vs ISP."
+            }
           ]
         },
         {
           "id": "part-5",
           "part": 5,
           "title": "CPU vs GPU vs NPU vs ISP — Who Processes Your Image?",
-          "thumbnail": "",
-          "heroImage": "",
+          "thumbnail": "/blogs/camera-architecture/p5.jpeg",
+          "heroImage": "/blogs/camera-architecture/p5.jpeg",
           "date": "2026-08-30",
           "readMinutes": 4,
           "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-computerarchitecture-imageprocessing-activity-7495856285867884544-myi5",
           "excerpt": "Part 5. ISP = specialist, CPU = control, GPU = parallel effects, NPU = AI (face, segmentation). Same sensor, different system, different photo.",
           "body": [
-            { "type": "paragraph", "text": "The ISP doesn't work alone. An SoC splits camera work: ISP (demosaic, denoise, white balance, HDR, tone map), CPU (control, settings, app coordination), GPU (parallel effects, transforms), NPU (face detection, segmentation, AI enhance: Frame → Net → labels)." },
-            { "type": "paragraph", "text": "Flow: Sensor → ISP → [CPU control | GPU parallel | NPU AI] → Final image. Optics + sensor + ISP + CPU + GPU + NPU + memory + software — a complete computing system." },
-            { "type": "quote", "text": "Same sensor, different system → different photo. But moving all those pixels creates a hardware challenge. Next: Part 6 — memory bandwidth." }
+            {
+              "type": "paragraph",
+              "text": "The ISP doesn't work alone. An SoC splits camera work: ISP (demosaic, denoise, white balance, HDR, tone map), CPU (control, settings, app coordination), GPU (parallel effects, transforms), NPU (face detection, segmentation, AI enhance: Frame → Net → labels)."
+            },
+            {
+              "type": "paragraph",
+              "text": "Flow: Sensor → ISP → [CPU control | GPU parallel | NPU AI] → Final image. Optics + sensor + ISP + CPU + GPU + NPU + memory + software — a complete computing system."
+            },
+            {
+              "type": "quote",
+              "text": "Same sensor, different system → different photo. But moving all those pixels creates a hardware challenge. Next: Part 6 — memory bandwidth."
+            }
           ]
         },
         {
           "id": "part-6",
           "part": 6,
           "title": "The Hidden Bottleneck — Memory Bandwidth",
-          "thumbnail": "",
-          "heroImage": "",
+          "thumbnail": "/blogs/camera-architecture/p6.jpeg",
+          "heroImage": "/blogs/camera-architecture/p6.jpeg",
           "date": "2026-09-01",
           "readMinutes": 4,
           "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-computerarchitecture-memorybandwidth-activity-7498402940559339520-FzZn",
           "excerpt": "Part 6. 4K120 10-bit ≈ 29.9 Gbps. Sensor→ISP→Memory→GPU/NPU→Encoder→Storage: fastest chip idles if memory chokes.",
           "body": [
-            { "type": "paragraph", "text": "4K UHD is 3840×2160 = 8,294,400 px/frame. At 120 FPS ≈ 995M px/s — nearly a billion pixels per second. At 10-bit RGB (30 bits/px) ≈ 29.9 Gbps (3.74 GB/s), before HDR buffering and copies." },
-            { "type": "paragraph", "text": "Path: Sensor → ISP → Memory → GPU/NPU/CPU → Encoder → Storage. Bandwidth = data / time. Multi-frame HDR holds several RAWs + masks at once." },
-            { "type": "quote", "text": "Sensor can capture, ISP can process, GPU/NPU can compute — if memory stalls, all stall. Performance = bottleneck. Next: Part 7 — combining multiple photos." }
+            {
+              "type": "paragraph",
+              "text": "4K UHD is 3840×2160 = 8,294,400 px/frame. At 120 FPS ≈ 995M px/s — nearly a billion pixels per second. At 10-bit RGB (30 bits/px) ≈ 29.9 Gbps (3.74 GB/s), before HDR buffering and copies."
+            },
+            {
+              "type": "paragraph",
+              "text": "Path: Sensor → ISP → Memory → GPU/NPU/CPU → Encoder → Storage. Bandwidth = data / time. Multi-frame HDR holds several RAWs + masks at once."
+            },
+            {
+              "type": "quote",
+              "text": "Sensor can capture, ISP can process, GPU/NPU can compute — if memory stalls, all stall. Performance = bottleneck. Next: Part 7 — combining multiple photos."
+            }
           ]
         },
         {
           "id": "part-7",
           "part": 7,
           "title": "Is a Smartphone Photo Really Just One Photo?",
-          "thumbnail": "",
-          "heroImage": "",
+          "thumbnail": "/blogs/camera-architecture/p7.jpeg",
+          "heroImage": "/blogs/camera-architecture/p7.jpeg",
           "date": "2026-09-02",
           "readMinutes": 5,
           "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-computationalphotography-activity-7499094263746580480-ggX8",
           "excerpt": "Part 7. HDR: under/normal/over → I_final=F(I1,I2,I3). Night mode aligns+merges bursts. Camera reconstructs, not just captures.",
           "body": [
-            { "type": "paragraph", "text": "The final photo may combine frames: HDR takes under (highlights) + normal + over (shadows) and merges I_final = F(I1, I2, I3). One exposure can't hold bright sky and dark foreground." },
-            { "type": "paragraph", "text": "Naive averaging ghosts on motion — needs alignment, motion rejection, exposure fusion, local tone mapping. Night mode stacks rapid frames to beat noise instead of one blurry long shot." },
-            { "type": "quote", "text": "Lens → sensor → multiple measurements → computation → image. The camera reconstructs. Where does measurement end and AI begin? Next: Part 8 — computational photography + AI." }
+            {
+              "type": "paragraph",
+              "text": "The final photo may combine frames: HDR takes under (highlights) + normal + over (shadows) and merges I_final = F(I1, I2, I3). One exposure can't hold bright sky and dark foreground."
+            },
+            {
+              "type": "paragraph",
+              "text": "Naive averaging ghosts on motion — needs alignment, motion rejection, exposure fusion, local tone mapping. Night mode stacks rapid frames to beat noise instead of one blurry long shot."
+            },
+            {
+              "type": "quote",
+              "text": "Lens → sensor → multiple measurements → computation → image. The camera reconstructs. Where does measurement end and AI begin? Next: Part 8 — computational photography + AI."
+            }
           ]
         },
         {
           "id": "part-8",
           "part": 8,
           "title": "Your Phone Camera Doesn't Just Capture — It Computes",
-          "thumbnail": "",
-          "heroImage": "",
+          "thumbnail": "/blogs/camera-architecture/p8.jpeg",
+          "heroImage": "/blogs/camera-architecture/p8.jpeg",
           "date": "2026-09-03",
           "readMinutes": 5,
           "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-computationalphotography-activity-7499459554577928194-lEDO",
           "excerpt": "Part 8. Classic ops + segmentation mask I_out=M·Isubject+(1−M)·Ibg. Photo = measurement + processing + fusion + AI estimate. NPU runs Y=f(WX+b).",
           "body": [
-            { "type": "paragraph", "text": "Beyond capture the phone asks what is in the scene. Classic ops (white balance, denoise, HDR merge, tone map, e.g. [R',G',B'] = M×[R,G,B]) plus AI segmentation: frame → net → per-pixel labels [subject|sky|background]." },
-            { "type": "paragraph", "text": "Scene-aware: subject sharp + skin tones, background bokeh, sky de-highlighted: I_out(x,y) = M·I_subject + (1−M)·I_background. NPU accelerates Y = f(WX+b)." },
-            { "type": "quote", "text": "AI estimates, not recovers, missing photons. Photo = measurement + processing + fusion + estimation. Next: Part 9 — what does 240 FPS demand?" }
+            {
+              "type": "paragraph",
+              "text": "Beyond capture the phone asks what is in the scene. Classic ops (white balance, denoise, HDR merge, tone map, e.g. [R',G',B'] = M×[R,G,B]) plus AI segmentation: frame → net → per-pixel labels [subject|sky|background]."
+            },
+            {
+              "type": "paragraph",
+              "text": "Scene-aware: subject sharp + skin tones, background bokeh, sky de-highlighted: I_out(x,y) = M·I_subject + (1−M)·I_background. NPU accelerates Y = f(WX+b)."
+            },
+            {
+              "type": "quote",
+              "text": "AI estimates, not recovers, missing photons. Photo = measurement + processing + fusion + estimation. Next: Part 9 — what does 240 FPS demand?"
+            }
           ]
         },
         {
           "id": "part-9",
           "part": 9,
           "title": "What Does 240 FPS Really Mean?",
-          "thumbnail": "",
-          "heroImage": "",
+          "thumbnail": "/blogs/camera-architecture/p9.jpeg",
+          "heroImage": "/blogs/camera-architecture/p9.jpeg",
           "date": "2026-09-04",
           "readMinutes": 4,
           "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-slowmotion-computervision-activity-7500122415004340224-FPfB",
           "excerpt": "Part 9. 240/30 = 8× slow-mo. 1080p240 ≈ 498M px/s. 4K caps at 60 FPS. HW 960 FPS (stacked DRAM) ≠ AI-interpolated 960 FPS.",
           "body": [
-            { "type": "paragraph", "text": "240 FPS played at 30 FPS = 240/30 = 8× slowdown: 1 s becomes 8 s. True 240 FPS must be captured: sensor → readout → ISP → memory → processing → encoder → storage." },
-            { "type": "paragraph", "text": "1080p (1920×1080 = 2,073,600 px) at 240 FPS ≈ 498M px/s plus ISP/memory. Hence 4K→60 FPS, 1080p→240 FPS. HW 960 FPS uses stacked sensor DRAM bursts; SW 960 FPS interpolates (Real A → AI frame → Real B)." },
-            { "type": "quote", "text": "More pixels × more frames = enormous throughput. Next: Part 10 — compressing billions of pixels to MBs." }
+            {
+              "type": "paragraph",
+              "text": "240 FPS played at 30 FPS = 240/30 = 8× slowdown: 1 s becomes 8 s. True 240 FPS must be captured: sensor → readout → ISP → memory → processing → encoder → storage."
+            },
+            {
+              "type": "paragraph",
+              "text": "1080p (1920×1080 = 2,073,600 px) at 240 FPS ≈ 498M px/s plus ISP/memory. Hence 4K→60 FPS, 1080p→240 FPS. HW 960 FPS uses stacked sensor DRAM bursts; SW 960 FPS interpolates (Real A → AI frame → Real B)."
+            },
+            {
+              "type": "quote",
+              "text": "More pixels × more frames = enormous throughput. Next: Part 10 — compressing billions of pixels to MBs."
+            }
           ]
         },
         {
           "id": "part-10",
           "part": 10,
           "title": "How Does a Camera Turn Billions of Pixels Into a Small File?",
-          "thumbnail": "",
-          "heroImage": "",
+          "thumbnail": "/blogs/camera-architecture/p10.jpeg",
+          "heroImage": "/blogs/camera-architecture/p10.jpeg",
           "date": "2026-09-05",
           "readMinutes": 5,
           "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-imagecompression-videocompression-activity-7500562382964805632-KaW-",
           "excerpt": "Part 10. 24 MP = 72 MB/frame; 30 FPS = 2.16 GB/s raw. DCT + quantization + entropy; H.264/H.265/AV1 motion+residual. HW encoders save battery.",
           "body": [
-            { "type": "paragraph", "text": "One 24 MP RGB frame (3 bytes/px) = 72 MB. At 30 FPS that's 2.16 GB/s raw — phones would fill instantly. Images: RGB → YCbCr → 8×8 blocks → DCT → quantization → entropy coding; DCT drops high frequencies eyes miss." },
-            { "type": "paragraph", "text": "Video reuses frames: Frame(t+1) ≈ Frame(t) + motion/residual (H.264, H.265/HEVC, AV1). Lossless restores exactly; lossy approximates — re-saving JPEGs artifacts. SoC HW encoders do it live without draining CPU." },
-            { "type": "quote", "text": "Photons → sensor → data → demosaic → ISP → processors → memory → high FPS → compression. Next: Part 11 — the complete architecture." }
+            {
+              "type": "paragraph",
+              "text": "One 24 MP RGB frame (3 bytes/px) = 72 MB. At 30 FPS that's 2.16 GB/s raw — phones would fill instantly. Images: RGB → YCbCr → 8×8 blocks → DCT → quantization → entropy coding; DCT drops high frequencies eyes miss."
+            },
+            {
+              "type": "paragraph",
+              "text": "Video reuses frames: Frame(t+1) ≈ Frame(t) + motion/residual (H.264, H.265/HEVC, AV1). Lossless restores exactly; lossy approximates — re-saving JPEGs artifacts. SoC HW encoders do it live without draining CPU."
+            },
+            {
+              "type": "quote",
+              "text": "Photons → sensor → data → demosaic → ISP → processors → memory → high FPS → compression. Next: Part 11 — the complete architecture."
+            }
           ]
         },
         {
           "id": "part-11",
           "part": 11,
           "title": "From Photons to a Photo — The Complete Architecture",
-          "thumbnail": "",
-          "heroImage": "",
+          "thumbnail": "/blogs/camera-architecture/p11.jpeg",
+          "heroImage": "/blogs/camera-architecture/p11.jpeg",
           "date": "2026-09-06",
           "readMinutes": 5,
           "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-computerarchitecture-imageprocessing-activity-7501288515104845825-zvdt",
           "excerpt": "Part 11. Shutter recap: lens → sensor+ADC → ISP → CPU/GPU/NPU → memory+multi-frame → codec → storage. Camera = sensing+compute system.",
           "body": [
-            { "type": "paragraph", "text": "Press shutter: scene → photons → lens → CMOS photodiodes → ADC numbers. ISP: demosaic, denoise, white balance, HDR, tone map. CPU controls, GPU parallels, NPU segments. Memory shuttles; HDR/night merge I_final = F(I1..In). Encoder writes JPEG/HEIF, H.265/AV1." },
-            { "type": "paragraph", "text": "Lens captures, sensor measures, ISP processes, CPU coordinates, GPU accelerates, NPU handles AI, memory moves data, codec compresses, software sets the look." },
-            { "type": "quote", "text": "Same sensor, different photos — why? Final: Part 12." }
+            {
+              "type": "paragraph",
+              "text": "Press shutter: scene → photons → lens → CMOS photodiodes → ADC numbers. ISP: demosaic, denoise, white balance, HDR, tone map. CPU controls, GPU parallels, NPU segments. Memory shuttles; HDR/night merge I_final = F(I1..In). Encoder writes JPEG/HEIF, H.265/AV1."
+            },
+            {
+              "type": "paragraph",
+              "text": "Lens captures, sensor measures, ISP processes, CPU coordinates, GPU accelerates, NPU handles AI, memory moves data, codec compresses, software sets the look."
+            },
+            {
+              "type": "quote",
+              "text": "Same sensor, different photos — why? Final: Part 12."
+            }
           ]
         },
         {
           "id": "part-12",
           "part": 12,
           "title": "Why Two Phones With Similar Cameras Take Different Photos",
-          "thumbnail": "",
-          "heroImage": "",
+          "thumbnail": "/blogs/camera-architecture/p12.jpeg",
+          "heroImage": "/blogs/camera-architecture/p12.jpeg",
           "date": "2026-09-08",
           "readMinutes": 4,
           "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_cameratechnology-computerscience-computerarchitecture-activity-7501628243385458689-sWZR",
           "excerpt": "Final part. The sensor is only one part: optics, ISP, compute, algorithms and tuning define the photo. 48 MP isn't the photograph.",
           "body": [
-            { "type": "paragraph", "text": "We started this series asking: what does 48 MP actually mean? 12 parts later, one final question: if two phones use similar sensors, why do their photos look completely different?" },
-            { "type": "paragraph", "text": "The answer is simple: the sensor is only one part of the camera system." },
-            { "type": "heading", "text": "What actually defines a camera?" },
-            { "type": "list", "items": ["Optics — lens sharpness, distortion, light transmission", "Sensor — pixel pitch, dynamic range, bit depth, size: 48 MP A ≠ 48 MP B", "ISP — demosaicing, noise reduction, white balance, tone mapping: RAW ≠ final photo", "Silicon & compute — CPU + GPU + NPU + ISP sharing real-time workloads", "Algorithms — HDR, Night Mode, portrait segmentation, super-resolution", "Software tuning — color profiles, contrast, skin-tone choices"] },
-            { "type": "quote", "text": "Camera Performance = f(Optics, Sensor, ISP, Compute, Memory, Algorithms, Software)" },
-            { "type": "paragraph", "text": "Physics provides photons → sensor measures → electronics digitizes → ISP processes → compute accelerates → memory moves data → algorithms reconstruct → codecs compress → software displays." },
-            { "type": "paragraph", "text": "Does 200 MP beat 48 MP? No. More megapixels give more samples, but quality depends on the entire pipeline. 48 MP isn't the photograph, it's just one number in a larger system." }
+            {
+              "type": "paragraph",
+              "text": "We started this series asking: what does 48 MP actually mean? 12 parts later, one final question: if two phones use similar sensors, why do their photos look completely different?"
+            },
+            {
+              "type": "paragraph",
+              "text": "The answer is simple: the sensor is only one part of the camera system."
+            },
+            {
+              "type": "heading",
+              "text": "What actually defines a camera?"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Optics — lens sharpness, distortion, light transmission",
+                "Sensor — pixel pitch, dynamic range, bit depth, size: 48 MP A ≠ 48 MP B",
+                "ISP — demosaicing, noise reduction, white balance, tone mapping: RAW ≠ final photo",
+                "Silicon & compute — CPU + GPU + NPU + ISP sharing real-time workloads",
+                "Algorithms — HDR, Night Mode, portrait segmentation, super-resolution",
+                "Software tuning — color profiles, contrast, skin-tone choices"
+              ]
+            },
+            {
+              "type": "quote",
+              "text": "Camera Performance = f(Optics, Sensor, ISP, Compute, Memory, Algorithms, Software)"
+            },
+            {
+              "type": "paragraph",
+              "text": "Physics provides photons → sensor measures → electronics digitizes → ISP processes → compute accelerates → memory moves data → algorithms reconstruct → codecs compress → software displays."
+            },
+            {
+              "type": "paragraph",
+              "text": "Does 200 MP beat 48 MP? No. More megapixels give more samples, but quality depends on the entire pipeline. 48 MP isn't the photograph, it's just one number in a larger system."
+            }
           ]
         }
       ]
@@ -229,7 +426,13 @@
       "title": "Understanding Grafana Metrics",
       "description": "15-part series moving from single metrics to metric families, app behavior, infrastructure and root-cause troubleshooting. Goal: stop memorizing metric names, start understanding the story behind the numbers.",
       "coverImage": "",
-      "tags": ["Grafana", "Prometheus", "DevOps", "Observability", "SRE"],
+      "tags": [
+        "Grafana",
+        "Prometheus",
+        "DevOps",
+        "Observability",
+        "SRE"
+      ],
       "episodes": [
         {
           "id": "part-1",
@@ -242,15 +445,50 @@
           "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_grafana-prometheus-devops-activity-7504458396448894976-On0c",
           "excerpt": "A metric is a live reflection of an event in your app. Trace a real request: Nginx → Django → DB → Prometheus → Grafana.",
           "body": [
-            { "type": "paragraph", "text": "If you've worked with Grafana, you've seen dashboards filled with charts: CPU usage, request latency, DB queries, HTTP requests. But have you ever stopped to ask: what actually makes this value change?" },
-            { "type": "paragraph", "text": "A metric isn't just a random number on a panel. It's a live reflection of an event inside your application." },
-            { "type": "heading", "text": "Trace a real user request" },
-            { "type": "list", "items": ["User sends a request", "Nginx receives it", "Django processes it", "DB query executes", "Metric counter updates", "Prometheus scrapes data", "Grafana plots the line"] },
-            { "type": "paragraph", "text": "So when django_db_execute_total moves, it's not generic activity. It means a specific database execution just happened." },
-            { "type": "heading", "text": "The debugging lesson" },
-            { "type": "paragraph", "text": "When latency spikes, that single number won't tell you the root cause. Debugging isn't reading numbers, it's connecting the dots:" },
-            { "type": "quote", "text": "HTTP Latency → Django View → DB Query Duration → DB Connections → CPU Usage" },
-            { "type": "paragraph", "text": "The real power of observability comes from understanding how these metrics relate to each other." }
+            {
+              "type": "paragraph",
+              "text": "If you've worked with Grafana, you've seen dashboards filled with charts: CPU usage, request latency, DB queries, HTTP requests. But have you ever stopped to ask: what actually makes this value change?"
+            },
+            {
+              "type": "paragraph",
+              "text": "A metric isn't just a random number on a panel. It's a live reflection of an event inside your application."
+            },
+            {
+              "type": "heading",
+              "text": "Trace a real user request"
+            },
+            {
+              "type": "list",
+              "items": [
+                "User sends a request",
+                "Nginx receives it",
+                "Django processes it",
+                "DB query executes",
+                "Metric counter updates",
+                "Prometheus scrapes data",
+                "Grafana plots the line"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "So when django_db_execute_total moves, it's not generic activity. It means a specific database execution just happened."
+            },
+            {
+              "type": "heading",
+              "text": "The debugging lesson"
+            },
+            {
+              "type": "paragraph",
+              "text": "When latency spikes, that single number won't tell you the root cause. Debugging isn't reading numbers, it's connecting the dots:"
+            },
+            {
+              "type": "quote",
+              "text": "HTTP Latency → Django View → DB Query Duration → DB Connections → CPU Usage"
+            },
+            {
+              "type": "paragraph",
+              "text": "The real power of observability comes from understanding how these metrics relate to each other."
+            }
           ]
         },
         {
@@ -264,19 +502,71 @@
           "linkedinUrl": "https://www.linkedin.com/posts/shaminda-kanchana_grafana-prometheus-devops-activity-7504881560471392256-ho5o",
           "excerpt": "Not all metrics behave the same. Counter only goes up, Gauge moves up and down, Histogram buckets latency, Summary pre-computes quantiles.",
           "body": [
-            { "type": "paragraph", "text": "Before you start reading Grafana charts, there's a core rule: not all metrics behave the same way. A value that only increases (like total errors) must be interpreted differently from a value that goes up and down (like CPU usage)." },
-            { "type": "heading", "text": "1. Counter — How many have happened total?" },
-            { "type": "list", "items": ["Only goes UP (or resets to 0 on restart)", "Tracks accumulative totals: 0 → 10 → 25 → 83", "Examples: total requests, total errors, django_db_execute_total"] },
-            { "type": "paragraph", "text": "Tip: look at the rate of change, not just the raw total." },
-            { "type": "heading", "text": "2. Gauge — What is the value right now?" },
-            { "type": "list", "items": ["Moves UP and DOWN dynamically", "Point-in-time snapshot", "Examples: CPU 40% → 75% → 52%, memory, active DB connections, queue size"] },
-            { "type": "heading", "text": "3. Histogram — How are observations distributed?" },
-            { "type": "paragraph", "text": "Essential for latency. Don't rely on averages. Groups data into buckets (e.g. how many requests took ≤0.1s, ≤0.5s, ≤2s). Exposes _bucket, _count and _sum." },
-            { "type": "heading", "text": "4. Summary — What are the calculated quantiles?" },
-            { "type": "paragraph", "text": "Also for latency, but calculates percentiles client-side. Example: p50 = 0.2s, p90 = 0.7s, p99 = 2.4s. Directly answers: how slow are my worst-case requests?" },
-            { "type": "heading", "text": "Cheat sheet" },
-            { "type": "list", "items": ["Counter → accumulated total", "Gauge → current state", "Histogram → raw distribution into buckets", "Summary → pre-calculated percentiles"] },
-            { "type": "quote", "text": "django_db_execute_total and django_db_query_duration_seconds_bucket are both database metrics, but need different functions (rate() vs histogram_quantile()) to chart correctly. Know your metric type before you build your panel." }
+            {
+              "type": "paragraph",
+              "text": "Before you start reading Grafana charts, there's a core rule: not all metrics behave the same way. A value that only increases (like total errors) must be interpreted differently from a value that goes up and down (like CPU usage)."
+            },
+            {
+              "type": "heading",
+              "text": "1. Counter — How many have happened total?"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Only goes UP (or resets to 0 on restart)",
+                "Tracks accumulative totals: 0 → 10 → 25 → 83",
+                "Examples: total requests, total errors, django_db_execute_total"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Tip: look at the rate of change, not just the raw total."
+            },
+            {
+              "type": "heading",
+              "text": "2. Gauge — What is the value right now?"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Moves UP and DOWN dynamically",
+                "Point-in-time snapshot",
+                "Examples: CPU 40% → 75% → 52%, memory, active DB connections, queue size"
+              ]
+            },
+            {
+              "type": "heading",
+              "text": "3. Histogram — How are observations distributed?"
+            },
+            {
+              "type": "paragraph",
+              "text": "Essential for latency. Don't rely on averages. Groups data into buckets (e.g. how many requests took ≤0.1s, ≤0.5s, ≤2s). Exposes _bucket, _count and _sum."
+            },
+            {
+              "type": "heading",
+              "text": "4. Summary — What are the calculated quantiles?"
+            },
+            {
+              "type": "paragraph",
+              "text": "Also for latency, but calculates percentiles client-side. Example: p50 = 0.2s, p90 = 0.7s, p99 = 2.4s. Directly answers: how slow are my worst-case requests?"
+            },
+            {
+              "type": "heading",
+              "text": "Cheat sheet"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Counter → accumulated total",
+                "Gauge → current state",
+                "Histogram → raw distribution into buckets",
+                "Summary → pre-calculated percentiles"
+              ]
+            },
+            {
+              "type": "quote",
+              "text": "django_db_execute_total and django_db_query_duration_seconds_bucket are both database metrics, but need different functions (rate() vs histogram_quantile()) to chart correctly. Know your metric type before you build your panel."
+            }
           ]
         }
       ]
