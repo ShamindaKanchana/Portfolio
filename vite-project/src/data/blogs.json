@@ -424,7 +424,7 @@
     {
       "id": "grafana-metrics",
       "title": "Understanding Grafana Metrics",
-      "description": "15-part series moving from single metrics to metric families, app behavior, infrastructure and root-cause troubleshooting. Goal: stop memorizing metric names, start understanding the story behind the numbers.",
+      "description": "15-part series from single metrics to root-cause troubleshooting: why and when metrics change, Counter vs Gauge vs Histogram vs Summary, reading total/count/sum/buckets, and connecting app metrics to infra. Goal: stop memorizing names, start understanding the story behind the numbers.",
       "coverImage": "",
       "tags": [
         "Grafana",
@@ -479,7 +479,7 @@
             },
             {
               "type": "paragraph",
-              "text": "When latency spikes, that single number won't tell you the root cause. Debugging isn't reading numbers, it's connecting the dots:"
+              "text": "When latency spikes (HTTP latency up), that single number won't tell you the root cause. Debugging isn't reading numbers, it's connecting the dots:"
             },
             {
               "type": "quote",
@@ -488,6 +488,18 @@
             {
               "type": "paragraph",
               "text": "The real power of observability comes from understanding how these metrics relate to each other."
+            },
+            {
+              "type": "heading",
+              "text": "What's coming in this 15-part series"
+            },
+            {
+              "type": "paragraph",
+              "text": "We move from single metrics to metric families to app behavior to infrastructure to root-cause troubleshooting. We break down: why and when metrics change; Counter vs Gauge vs Histogram vs Summary; reading total, count, sum and buckets; connecting application metrics to infra metrics."
+            },
+            {
+              "type": "quote",
+              "text": "Part 1/15 — Introduction. Next up: Prometheus metric types (Counter, Gauge, Histogram and Summary)."
             }
           ]
         },
@@ -504,7 +516,7 @@
           "body": [
             {
               "type": "paragraph",
-              "text": "Before you start reading Grafana charts, there's a core rule: not all metrics behave the same way. A value that only increases (like total errors) must be interpreted differently from a value that goes up and down (like CPU usage)."
+              "text": "Before you start reading Grafana charts, there's a core rule: not all metrics behave the same way. A value that only increases (like total errors) must be interpreted differently from a value that goes up and down (like CPU usage). Prometheus categorizes data into 4 core metric types."
             },
             {
               "type": "heading",
@@ -515,7 +527,7 @@
               "items": [
                 "Only goes UP (or resets to 0 on restart)",
                 "Tracks accumulative totals: 0 → 10 → 25 → 83",
-                "Examples: total requests, total errors, django_db_execute_total"
+                "Examples: total requests, total errors, total DB queries (django_db_execute_total)"
               ]
             },
             {
@@ -530,17 +542,17 @@
               "type": "list",
               "items": [
                 "Moves UP and DOWN dynamically",
-                "Point-in-time snapshot",
-                "Examples: CPU 40% → 75% → 52%, memory, active DB connections, queue size"
+                "Captures a single point-in-time snapshot",
+                "Examples: CPU usage (40% → 75% → 52%), memory usage, active DB connections, queue size"
               ]
             },
             {
               "type": "heading",
-              "text": "3. Histogram — How are observations distributed?"
+              "text": "3. Histogram — How are the observations distributed?"
             },
             {
               "type": "paragraph",
-              "text": "Essential for latency. Don't rely on averages. Groups data into buckets (e.g. how many requests took ≤0.1s, ≤0.5s, ≤2s). Exposes _bucket, _count and _sum."
+              "text": "Essential for latency — don't just rely on averages. Groups data into buckets (e.g. how many requests took ≤0.1s, ≤0.5s, ≤2s). Exposes metrics ending in _bucket, _count and _sum."
             },
             {
               "type": "heading",
@@ -548,7 +560,7 @@
             },
             {
               "type": "paragraph",
-              "text": "Also for latency, but calculates percentiles client-side. Example: p50 = 0.2s, p90 = 0.7s, p99 = 2.4s. Directly answers: how slow are my worst-case requests?"
+              "text": "Also used for latency, but calculates percentiles directly on the client side. Examples: p50 = 0.2s, p90 = 0.7s, p99 = 2.4s. Directly answers: how slow are my worst-case requests?"
             },
             {
               "type": "heading",
@@ -559,13 +571,21 @@
               "items": [
                 "Counter → accumulated total",
                 "Gauge → current state",
-                "Histogram → raw distribution into buckets",
-                "Summary → pre-calculated percentiles"
+                "Histogram → raw data distribution into buckets",
+                "Summary → pre-calculated percentiles (quantiles)"
               ]
             },
             {
+              "type": "heading",
+              "text": "Why this matters for Grafana"
+            },
+            {
+              "type": "paragraph",
+              "text": "django_db_execute_total and django_db_query_duration_seconds_bucket are both database metrics, but they require entirely different Prometheus functions (like rate() vs histogram_quantile()) to chart correctly. Know your metric type before you build your panel."
+            },
+            {
               "type": "quote",
-              "text": "django_db_execute_total and django_db_query_duration_seconds_bucket are both database metrics, but need different functions (rate() vs histogram_quantile()) to chart correctly. Know your metric type before you build your panel."
+              "text": "Part 2/15 — Prometheus metric types. Next up: what happens between your application, Prometheus and Grafana?"
             }
           ]
         }
