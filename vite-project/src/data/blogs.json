@@ -4,7 +4,7 @@
       "id": "camera-architecture",
       "title": "Camera Architecture",
       "description": "12-part series from photons to final image: what 48 MP actually means, optics, sensor, ISP, compute, algorithms and software tuning.",
-      "coverImage": "",
+      "coverImage": "/blogs/camera-architecture/cover.jpeg",
       "tags": [
         "CameraTechnology",
         "ComputerScience",
@@ -425,7 +425,7 @@
       "id": "grafana-metrics",
       "title": "Understanding Grafana Metrics",
       "description": "15-part series from single metrics to root-cause troubleshooting: why and when metrics change, Counter vs Gauge vs Histogram vs Summary, reading total/count/sum/buckets, and connecting app metrics to infra. Goal: stop memorizing names, start understanding the story behind the numbers.",
-      "coverImage": "",
+      "coverImage": "/blogs/grafana/cover.jpeg",
       "tags": [
         "Grafana",
         "Prometheus",
